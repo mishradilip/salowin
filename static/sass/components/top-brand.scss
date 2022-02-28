@@ -1,0 +1,11 @@
+.top-brand-section {
+  .top-brand-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      width: 49%;
+      margin-bottom: 20px;
+    }
+  }
+}

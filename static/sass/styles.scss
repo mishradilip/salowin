@@ -1,0 +1,13 @@
+@import 'globals/reset';
+@import 'globals/default';
+@import 'globals/colors';
+@import 'globals/common';
+
+@import 'components/header.scss';
+@import 'components/swiper.scss';
+@import 'components/top-brand.scss';
+
+.swiper-section,
+.hot-deal-section {
+  margin-bottom: 80px;
+}

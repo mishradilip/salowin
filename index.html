@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Salowin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./build/css/styles.css">
+  <link rel="icon" href="./build/img/favicon.png" sizes="32x32" />
+</head>
+<body>
+  <header class="header-wrapper">
+    <div class="container">
+      <a href="/" class="logo">
+        <img class="img-responsive" src="./build/img/logo.png" alt="Salowin" />
+      </a>
+      <div class="search-block">
+        <form class="search-form">
+          <input class="input-search" type="search" placeholder="What are you looking for ?" name="search" id="search">
+          <button type="submit" class="btn-search">
+            <img src="./build/img/icon-search.png" alt="Search" />
+          </button>
+        </form>
+      </div>
+      <div class="user-action">
+        <a href="/login.html" class="user-action-link user-login"><img src="./build/img/icon-profile.png" alt="Profile"> Login</a>
+        <a href="/signup.html" class="user-action-link user-signup">Signup</a>
+        <a href="/wishlist.html" class="user-action-link user-wishlist">
+          <img src="./build/img/icon-wishlist.png" alt="Wishlist">
+        </a>
+        <a href="/cart.html" class="user-action-link user-cart">
+          <img src="./build/img/icon-cart.png" alt="Cart">
+        </a>
+      </div>
+    </div>
+    <nav class="container header-nav">
+      <ul class="menu-navigation">
+        <li class="menu-item active">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Accessories</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Hair</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Commercial Cans</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Beauty</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Makeup</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Nails</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Pedi & Mani</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" class="hvr-underline-from-left">Tools</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="body-wrapper">
+    <section class="swiper-section">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./build/img/slider/slider.jpeg" alt="">
+          </div>
+          <div class="swiper-slide"><img src="./build/img/slider/slider.jpeg" alt=""></div>
+          <div class="swiper-slide">Slider 3</div>
+          <div class="swiper-slide"><img src="./build/img/slider/slider.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="./build/img/slider/slider.jpeg" alt=""></div>
+        </div>
+        <div class="swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="hot-deal-section">
+      <div class="container">
+        <h2 class="section-heading">Hot Deals</h2>
+        <a href="" class="link-item">
+          <img src="./build/img/hot-deal.jpeg" alt="Hot deal" class="img-responsive" />
+        </a>
+      </div>
+    </section>
+    <section class="top-brand-section">
+      <div class="container">
+        <h2 class="section-heading">Top Brands</h2>
+        <ul class="top-brand-list">
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand-2.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand-2.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand-2.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand-2.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+          <li>
+            <a href="" class="link-item">
+              <img src="./build/img/top-brand.jpeg" alt="" class="img-responsive" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="feature-brand-section">
+      <div class="container">
+        <h2 class="section-heading">Featured Brands</h2>
+        <ul class="top-brand-list">
+          </ul>
+      </div>
+    </section>
+  </div>
+  <footer class="footer-wrapper">
+    <div class="container">
+      Footer
+    </div>
+  </footer>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./build/js/script.js"></script>
+</body>
+</html>
