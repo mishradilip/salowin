@@ -41,15 +41,22 @@
         max-width: 350px;
         display: flex;
         align-items: center;
-        padding-left: 12px;
+        position: relative;
         .img-email {
           width: 16px;
           height: 16px;
+          position: absolute;
+          left: 12px;
         }
         .input-text {
           height: 40px;
-          padding-left: 10px;
+          padding-left: 32px;
           width: 100%;
+          border-top: 1px solid $white;
+          border-bottom: 1px solid $white;
+          &:focus{
+            border-color: $primary_color;
+          }
         }
         .btn-send {
           background-color: $primary_color;
@@ -75,6 +82,7 @@
   .footer-navigation-section {
     padding-top: 64px;
     padding-bottom: 64px;
+    background-color: $white;
     .footer-menu-list {
       display: flex;
       justify-content: space-between;
@@ -110,9 +118,16 @@
       justify-content: space-between;
       li {
         display: flex;
+        width: 22%;
+        align-items: center;
+        &.stay-connected {
+          border-left: 1px dashed #C0C3CE;
+          padding-left: 40px;
+        }
       }
       .item-content {
         padding-left: 16px;
+        width: 260px;
         h5 {
           font-weight: 600;
           font-size: 14px;
@@ -126,6 +141,61 @@
           line-height: 17px;
         }
       }
+      .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .social-link {
+          background: url(/build/img/icon-sprite.png) no-repeat;
+          width: 20px;
+          height: 20px;
+          background-position: 0 0;
+          &:not(:last-child) {
+            margin-right: 8px;
+          }
+          &.inta-link {
+            background-position: -27px 0px;
+          }
+          &.youtube-link {
+            background-position: -56px 0;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom-section {
+    background-color: #E5E5E5;
+    border-top: 1px solid #EFF1FA;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      li {
+        &:not(:last-child) {
+          margin-right: 32px;
+        }
+        a {
+          color: #545962;
+          font-size: 12px;
+          line-height: 15px;
+          font-weight: 500;
+          text-transform: uppercase;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .copyright-text {
+      color: #8C94A0;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0;
     }
   }
 }
