@@ -7,13 +7,16 @@
 @import 'components/swiper.scss';
 @import 'components/top-brand.scss';
 @import 'components/feature-brand.scss';
+@import 'components/footer.scss';
 
 .swiper-section,
 .deal-section,
 .top-brand-section,
 .feature-brand-section,
 .info-section,
-.top-category-section {
+.top-category-section,
+.budget-section,
+.clearance-sale {
   margin-bottom: 80px;
 }
 
