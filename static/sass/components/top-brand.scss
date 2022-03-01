@@ -6,6 +6,11 @@
     li {
       width: 49%;
       margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out 0s, -webkit-transform 0.5s ease-in-out 0s;
+      &:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+      }
     }
   }
 }
