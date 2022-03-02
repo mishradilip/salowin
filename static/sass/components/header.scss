@@ -7,8 +7,11 @@
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0 0;
+    padding: 8px 0;
     align-items: center;
+    &.header-nav {
+      padding-bottom: 0;
+    }
 
     .logo {
       max-width: 116px;
