@@ -1,8 +1,13 @@
 .header-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  background-color: $white;
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 8px 0 0;
     align-items: center;
 
     .logo {
@@ -69,23 +74,78 @@
       justify-content: flex-start;
       > li {
         display: flex;
+        padding-bottom: 8px;
+        &:hover {
+          .menu-block {
+            display: block;
+          }
+        }
         &:not(:last-child) {
           margin-right: 88px;
         }
         &.active {
-          a {
+          >a {
             color: $primary_color;
             &::before {
               right: 0;
             }
           }
         }
-        a {
+        > a {
           color: $primary_text_color;
           font-size: 13px;
           line-height: 16px;
           font-weight: 500;
           padding-bottom: 14px;
+        }
+        .menu-block {
+          background: rgba(26, 31, 38, 0.75);
+          position: fixed;
+          top: 100px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: none;
+        }
+        .menu-container {
+          background-color: $white;
+          border: 1px solid #EBECF0;
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+          border-radius: 0px 0px 8px 8px;
+          padding: 0;
+          .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            > li {
+              width: 16.6%;
+              padding-top: 24px;
+              padding-left: 24px;
+              &:nth-child(even) {
+                background-color: #F9FBFE;
+              }
+              .menu-title {
+                font-weight: 600;
+                color: $primary_color;
+                margin-bottom: 16px;
+                display: block;
+              }
+              .sub-menu-links {
+                width: 100%;
+                li {
+                  &:not(:last-child) {
+                    margin-bottom: 16px;
+                  }
+                }
+                a {
+                  color: #545962;
+                  &:hover {
+                    color: $primary_text_color;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
