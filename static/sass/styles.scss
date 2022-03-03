@@ -109,3 +109,62 @@ body {
     }
   }
 }
+
+@media (max-width:767px) {
+  body {
+    padding-top: 225px;
+  }
+
+  .swiper-section,
+  .deal-section,
+  .top-brand-section,
+  .feature-brand-section,
+  .info-section,
+  .top-category-section,
+  .budget-section,
+  .clearance-sale {
+    margin-bottom: 40px;
+  }
+
+  .info-section {
+    .info-list {
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08), 0px 2px 3px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      li {
+        flex-flow: column;
+        text-align: center;
+        padding: 0 8px;
+        img {
+          margin-right: 0;
+        }
+        span {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .budget-section {
+    .budget-list {
+      .budget-item {
+        width: 46%;
+        height: 100px;
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+        .off::after {
+          top: -15px;
+        }
+        .small {
+          font-size: 12px;
+          line-height: 14px;
+        }
+        .large {
+          font-size: 34px;
+          line-height: 41px;
+        }
+      }
+    }
+  }
+}

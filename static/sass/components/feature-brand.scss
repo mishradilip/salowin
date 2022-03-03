@@ -39,3 +39,16 @@
     }
   }
 }
+
+@media (max-width:767px) {
+  .feature-brand-section {
+    .feature-list {
+      li {
+        width: 47%;
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

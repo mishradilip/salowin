@@ -170,9 +170,11 @@
         }
       }
       .menu-navigation{
+        overflow-x: auto;
         &>li {
+          padding: 0;
           &:not(:last-child) {
-            margin-right: 0;
+            margin-right: 8px;
           }
           margin-right: 8px;
           background: #FBF6E5;
@@ -184,8 +186,17 @@
             background: #E5EEFB;
           }
           >a {
+            padding-bottom: 0;
+            width: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            text-align: center;
             img {
               display: block;
+              border-radius: 50%;
+              margin-bottom: 8px;
             }
           }
         }

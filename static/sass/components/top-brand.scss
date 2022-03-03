@@ -14,3 +14,14 @@
     }
   }
 }
+
+@media (max-width:767px) {
+  .top-brand-section {
+    .top-brand-list {
+      li {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
