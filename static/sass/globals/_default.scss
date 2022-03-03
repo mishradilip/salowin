@@ -60,8 +60,10 @@ video {
 }
 
 @media (max-width:767px) {
-  .container {
+  body .container {
     max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .mob-visible {
