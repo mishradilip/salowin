@@ -9,12 +9,39 @@
     justify-content: space-between;
     padding: 8px 0;
     align-items: center;
+    .btn-hamburger {
+      display: none;
+      border: 1.5px solid #000;
+      width: 12px;
+      height: 12px;
+      border-left: none;
+      border-right: none;
+      background-color: transparent;
+    }
     &.header-nav {
       padding-bottom: 0;
+    }
+    .logo-block {
+      display: flex;
+      align-items: center;
+      .btn-hamburger {
+        margin-right: 20px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          position: absolute;
+          background: #000;
+          height: 2px;
+          left: 0;
+          top: 3.5px;
+        }
+      }
     }
 
     .logo {
       max-width: 116px;
+      display: block;
     }
 
     .search-block {
@@ -167,6 +194,9 @@
         padding-bottom: 20px;
       }
       &.top-header-container {
+        .btn-hamburger {
+          display: block;
+        }
         flex-wrap: wrap;
         .search-block {
           order: 3;
