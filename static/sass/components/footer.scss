@@ -201,6 +201,23 @@
   }
 }
 
+@media (min-width:768px) and (max-width:1024px) {
+  .footer-wrapper {
+    .footer-top-section {
+      .item-block {
+        .link-item {
+          img {
+            max-width: 100px;
+          }
+        }
+        .subscription-form {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width:767px) {
   .footer-wrapper {
     .footer-top-section {

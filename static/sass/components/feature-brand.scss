@@ -39,6 +39,16 @@
   }
 }
 
+@media (min-width:768px) and (max-width:1024px) {
+  .feature-brand-section {
+    .feature-list {
+      li {
+        width: 31%;
+      }
+    }
+  }
+}
+
 @media (max-width:767px) {
   .feature-brand-section {
     .feature-list {
