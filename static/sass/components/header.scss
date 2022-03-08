@@ -160,8 +160,12 @@
 
 @media (max-width:767px) {
   .header-wrapper {
+    position: static;
     .container {
       padding: 8px 16px;
+      &.header-nav {
+        padding-bottom: 20px;
+      }
       &.top-header-container {
         flex-wrap: wrap;
         .search-block {

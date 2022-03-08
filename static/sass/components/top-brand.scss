@@ -6,9 +6,15 @@
     li {
       width: 49%;
       margin-bottom: 20px;
-      transition: transform 0.3s ease-in-out 0s, -webkit-transform 0.5s ease-in-out 0s;
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      transition-duration: 0.3s;
+      transition-property: box-shadow;
+      border-radius: 8px;
+      overflow: hidden;
+      a {display: block;}
       &:hover {
-        transform: translateY(-5px);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
         cursor: pointer;
       }
     }
