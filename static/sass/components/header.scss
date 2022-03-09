@@ -7,7 +7,8 @@
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
     align-items: center;
     .btn-hamburger {
       display: none;
@@ -203,7 +204,7 @@
   
 }
 
-@media (max-width:767px) {
+@media (max-width:1024px) {
   .header-wrapper {
     position: static;
     .container {
@@ -217,8 +218,10 @@
         }
         flex-wrap: wrap;
         .search-block {
-          order: 3;
-          margin-top: 16px;
+          @media (max-width:767px) {
+            order: 3;
+            margin-top: 16px;
+          }
         }
       }
       .menu-navigation{

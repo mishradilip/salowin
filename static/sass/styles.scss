@@ -116,7 +116,7 @@ body {
   }
 }
 
-@media (max-width:767px) {
+@media (max-width:1024px) {
   body {
     padding-top: 0;
   }
@@ -153,11 +153,14 @@ body {
 
   .budget-section {
     .budget-list {
+      justify-content: center;
       .budget-item {
         width: 46%;
         height: 100px;
-        &:nth-child(even) {
-          margin-right: 0;
+        @media (max-width:767px) {
+          &:nth-child(even) {
+            margin-right: 0;
+          }
         }
         .off::after {
           top: -15px;
