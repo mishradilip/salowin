@@ -4,6 +4,7 @@
   z-index: 9;
   width: 100%;
   background-color: $white;
+  box-shadow: inset 0px -1px 0px #EBECF0;
   .container {
     display: flex;
     justify-content: space-between;
@@ -81,7 +82,7 @@
         color: $primary_text_color;
         font-size: 14px;
         line-height: 16px;
-        margin-right: 8px;
+        margin-right: 0;
         &:hover{
           color: $primary_color;
         }
@@ -117,6 +118,7 @@
         &.active {
           >a {
             color: $primary_color;
+            font-weight: 600;
             &::before {
               right: 0;
             }

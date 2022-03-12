@@ -2,6 +2,7 @@
   .top-brand-list {
     display: flex;
     justify-content: space-between;
+    
     flex-wrap: wrap;
     li {
       width: 49%;
@@ -12,6 +13,10 @@
       transition-property: box-shadow;
       border-radius: 8px;
       overflow: hidden;
+      @media (max-width:767px) {
+        display: flex;
+        justify-content: center;
+      }
       a {display: block;}
       &:hover {
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
