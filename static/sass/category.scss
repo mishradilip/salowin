@@ -5,7 +5,13 @@
 
 @import 'components/header.scss';
 @import 'components/swiper.scss';
+@import 'components/product-item.scss';
 @import 'components/footer.scss';
+
+.shop-by-category-section,
+.best-seller-section {
+  padding-top: 80px;
+}
 
 .shop-by-category-section {
   padding-top: 80px;
@@ -66,6 +72,22 @@
             background-color: #FFA8A8;
           }
         }
+      }
+    }
+  }
+}
+
+.best-seller-section {
+  .best-product-list {
+    display: flex;
+    flex-wrap: wrap;
+    .product-card {
+      background-color: $white;
+      width: 23.5%;
+      margin-bottom: 40px;
+      margin-right: 16px;
+      &:nth-child(4n) {
+        margin-right: 0;
       }
     }
   }
