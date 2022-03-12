@@ -1,0 +1,72 @@
+@import 'globals/reset';
+@import 'globals/default';
+@import 'globals/colors';
+@import 'globals/common';
+
+@import 'components/header.scss';
+@import 'components/swiper.scss';
+@import 'components/footer.scss';
+
+.shop-by-category-section {
+  padding-top: 80px;
+  .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      background-color: $white;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08), 0px 2px 3px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      margin-right: 32px;
+      margin-bottom: 32px;
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+      a {
+        font-size: 18px;
+        width: 251px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 91px;
+        padding-left: 31px;
+        color: #1A1F26;
+        font-weight: 600;
+        line-height: 22px;
+        position: relative;
+        &::before {
+          content: "";
+          background-color: #a8cdff;
+          width: 40px;
+          height: 35px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border-top-left-radius: 50px;
+          opacity: 0.23;
+        }
+        &::after {
+          content: "";
+          border: solid #000;
+          border-width: 1.5px 1.5px 0 0;
+          padding: 3.5px;
+          display: inline-block;
+          transform: rotate(45deg) translateY(-50%);
+          position: absolute;
+          bottom: 8px;
+          right: 16px;
+        }
+        &.orange {
+          &::before {
+            background-color: #FFDCA8;
+          }
+        }
+        &.pink {
+          &::before {
+            background-color: #FFA8A8;
+          }
+        }
+      }
+    }
+  }
+}
