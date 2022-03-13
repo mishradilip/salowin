@@ -8,6 +8,7 @@
 @import 'components/product-item.scss';
 @import 'components/footer.scss';
 
+
 .shop-by-category-section,
 .best-seller-section {
   padding-top: 80px;
@@ -137,5 +138,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width:1024px) {
+  .header-wrapper .container.header-nav {
+    display: none;
   }
 }
