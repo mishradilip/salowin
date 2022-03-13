@@ -156,8 +156,32 @@
           }
           
         }
+        .discounted-list {
+          display: none;
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            input[type="checkbox"] {
+              width: 22px;
+              height: 22px;
+              border: 1px solid #C0C3CE;
+              border-radius: 4px;
+              margin-right: 12px;
+            }
+            label {
+              color: #545962;
+              font-size: 14px;
+              line-height: 17px;
+              font-weight: 400;
+              margin: 0;
+              cursor: pointer;
+            }
+          }
+        }
         &.active {
-          .cat-wrapper-list {
+          .cat-wrapper-list,
+          .filter-wrapper {
             display: block;
           }
           .title {
