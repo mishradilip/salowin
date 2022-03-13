@@ -6,7 +6,8 @@ const { dest, buildPath, MODE } = require('./paths');
 
 const conf = {
   entry: {
-    script: path.resolve(__dirname, '../static/js/index.js')
+    script: path.resolve(__dirname, '../static/js/index.js'),
+    categoryScript: path.resolve(__dirname, '../static/js/category.js')
   },
   output: {
     filename: '[name].js',
