@@ -1,0 +1,22 @@
+.breadcrumb-list {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  @media (max-width:767px) {
+    margin-bottom: 20px;
+  }
+  li {
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        color: #9BA4B1;
+        margin: 0 4px;
+      }
+    }
+    a {
+      color: #9BA4B1;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
