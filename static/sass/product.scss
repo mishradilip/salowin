@@ -306,3 +306,41 @@
     }
   }
 }
+
+@media (max-width:1024px) {
+  .header-wrapper .container.header-nav {
+    display: none;
+  }
+}
+
+@media (max-width:767px) {
+  .breadcrumb-section {
+    display: none;
+  }
+  .product-container {
+    flex-flow: column;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+  .product-section {
+    .product-gallery {
+      width: 100%;
+      .thumb-slider {
+        display: none;
+      }
+      .product-slider {
+        padding: 0;
+      }
+    }
+    .product-detail {
+      padding: 0;
+      width: 100%;
+      padding-top: 28px;
+      .product-title {
+        font-optical-sizing: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}
