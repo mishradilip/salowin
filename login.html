@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no" />
+  <title>Welcome to Salowin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./build/css/login.css">
+  <link rel="icon" href="./build/img/favicon.png" sizes="32x32" />
+</head>
+
+<body class="login-page">
+  <header class="header-wrapper">
+    <div class="container top-header-container">
+      <div class="logo-block">
+        <button class="btn-hamburger"></button>
+        <a href="/" class="logo">
+          <img class="img-responsive" src="./build/img/logo.png" alt="Salowin" />
+        </a>
+      </div>
+      <div class="user-action">
+        <a href="" class="download-app">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 15H10.0083H10ZM6.66667 17.5H13.3333C13.7754 17.5 14.1993 17.3244 14.5118 17.0118C14.8244 16.6993 15 16.2754 15 15.8333V4.16667C15 3.72464 14.8244 3.30072 14.5118 2.98816C14.1993 2.67559 13.7754 2.5 13.3333 2.5H6.66667C6.22464 2.5 5.80072 2.67559 5.48816 2.98816C5.17559 3.30072 5 3.72464 5 4.16667V15.8333C5 16.2754 5.17559 16.6993 5.48816 17.0118C5.80072 17.3244 6.22464 17.5 6.66667 17.5Z" stroke="#1A1F26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
+          <span>Download App</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="body-wrapper">
+    <section class="login-wrapper">
+      <div class="container">
+        <div class="modal-body">
+          <div class="login-modal ">
+            <svg class="svg-icon svg-close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.2753 4.60893C16.5194 4.36486 16.5194 3.96913 16.2753 3.72505C16.0312 3.48097 15.6355 3.48097 15.3914 3.72505L10 9.11646L4.60861 3.72505C4.36453 3.48098 3.9688 3.48098 3.72472 3.72505C3.48064 3.96913 3.48064 4.36486 3.72472 4.60894L9.11612 10.0003L3.72474 15.3917C3.48067 15.6358 3.48067 16.0315 3.72474 16.2756C3.96882 16.5197 4.36455 16.5197 4.60863 16.2756L10 10.8842L15.3914 16.2756C15.6355 16.5197 16.0312 16.5197 16.2753 16.2756C16.5194 16.0315 16.5194 15.6358 16.2753 15.3917L10.8839 10.0003L16.2753 4.60893Z" fill="#545962"/>
+            </svg>            
+            <h3 class="title">Sign in to your account</h3>
+            <div class="control-wrapper">
+              <input required type="number" maxlength="10" name="mobileno" placeholder="Mobile number" class="input-control" id="mobileno" />
+            </div>
+            <button class="btn btn-send-otp"> Send OTP</button>
+          </div>
+          <div class="otp-modal hide">
+            <svg class="svg-icon svg-close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.2753 4.60893C16.5194 4.36486 16.5194 3.96913 16.2753 3.72505C16.0312 3.48097 15.6355 3.48097 15.3914 3.72505L10 9.11646L4.60861 3.72505C4.36453 3.48098 3.9688 3.48098 3.72472 3.72505C3.48064 3.96913 3.48064 4.36486 3.72472 4.60894L9.11612 10.0003L3.72474 15.3917C3.48067 15.6358 3.48067 16.0315 3.72474 16.2756C3.96882 16.5197 4.36455 16.5197 4.60863 16.2756L10 10.8842L15.3914 16.2756C15.6355 16.5197 16.0312 16.5197 16.2753 16.2756C16.5194 16.0315 16.5194 15.6358 16.2753 15.3917L10.8839 10.0003L16.2753 4.60893Z" fill="#545962"/>
+            </svg>            
+            <h3 class="title">Enter OTP sent to 9876543210</h3>
+            <h5 class="sub-heading">
+              <svg class="svg-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.82133 4.82123L11.1787 7.17856M9.82133 3.82123C10.1339 3.50863 10.5579 3.33301 11 3.33301C11.4421 3.33301 11.8661 3.50863 12.1787 3.82123C12.4913 4.13383 12.6669 4.55781 12.6669 4.99989C12.6669 5.44198 12.4913 5.86596 12.1787 6.17856L6.33333 12.0239H4V9.64256L9.82133 3.82123Z" stroke="#2072DE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>CHANGE NUMBER</span>
+            </h5>
+            <form class="form-wrapper">
+              <div class="control-wrapper">
+                <input id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)"/>
+                <input id="codeBox2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)"/>
+                <input id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)"/>
+                <input id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)"/>
+              </div>
+              <button class="btn"> Verify and Continue</button>
+            </form>
+          </div>
+          <ul class="footer-link">
+            <li><a href="">Terms of use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Shipping Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./build/js/loginScript.js"></script>
+  <script>
+    function getCodeBoxElement(index) {
+      return document.getElementById('codeBox' + index);
+    }
+    
+    function onKeyUpEvent(index, event) {
+      const eventCode = event.which || event.keyCode;
+      if (getCodeBoxElement(index).value.length === 1) {
+        if (index !== 4) {
+          getCodeBoxElement(index + 1).focus();
+        } else {
+          getCodeBoxElement(index).blur();
+          // Submit code
+          console.log('submit code ');
+        }
+      }
+      if (eventCode === 8 && index !== 1) {
+        getCodeBoxElement(index - 1).focus();
+      }
+    }
+    
+    function onFocusEvent(index) {
+      for (item = 1; item < index; item++) {
+        const currentElement = getCodeBoxElement(item);
+        if (!currentElement.value) {
+          currentElement.focus();
+          break;
+        }
+      }
+    }
+  </script>
+</body>

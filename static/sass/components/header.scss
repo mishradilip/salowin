@@ -78,6 +78,17 @@
     }
 
     .user-action {
+      .download-app {
+        display: flex;
+        align-items: center;
+        color: $primary_text_color;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        .svg-icon {
+          margin-right: 4px;
+        }
+      }
       .user-action-link {
         color: $primary_text_color;
         font-size: 14px;
@@ -264,6 +275,11 @@
           margin-right: 12px;
           span,
           &.user-signup {
+            display: none;
+          }
+        }
+        .download-app {
+          span {
             display: none;
           }
         }
