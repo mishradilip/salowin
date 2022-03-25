@@ -7,16 +7,16 @@ export default function commonEvents() {
   }
   
   const bindEvents = () => {
-    console.log('Bind Event');
-    // const tabs = document.querySelectorAll(".app-section .tab-panel p");
-    // tabs.forEach(element => {
-    //   element.addEventListener("click", function () {
-    //     const activeElement = document.querySelector(
-    //       ".app-section .tab-panel .active"
-    //     );
-    //     const currentElement = this;
-    //   });
-    // });
+    const cartIcon = document.querySelector(".header-wrapper .user-cart");
+    const cartWrapper = document.querySelector(".body-wrapper .cart-wrapper");
+    cartIcon.addEventListener("click", function () {
+      cartWrapper.classList.add('open');
+    });
+
+    const cartCloseIcon = document.querySelector(".cart-wrapper .svg-close");
+    cartCloseIcon.addEventListener("click", function () {
+      cartWrapper.classList.remove('open');
+    });
 
   }
   const init = () => {
