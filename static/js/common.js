@@ -9,14 +9,18 @@ export default function commonEvents() {
   const bindEvents = () => {
     const cartIcon = document.querySelector(".header-wrapper .user-cart");
     const cartWrapper = document.querySelector(".body-wrapper .cart-wrapper");
-    cartIcon.addEventListener("click", function () {
-      cartWrapper.classList.add('open');
-    });
+    if(cartIcon) {
+      cartIcon.addEventListener("click", function () {
+        cartWrapper.classList.add('open');
+      });
+    }
 
     const cartCloseIcon = document.querySelector(".cart-wrapper .svg-close");
-    cartCloseIcon.addEventListener("click", function () {
-      cartWrapper.classList.remove('open');
-    });
+    if(cartCloseIcon) {
+      cartCloseIcon.addEventListener("click", function () {
+        cartWrapper.classList.remove('open');
+      });
+    }
 
   }
   const init = () => {
