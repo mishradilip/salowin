@@ -57,30 +57,30 @@
       <div class="container">
         <div class="left-section">
           <h2>Add Address</h2>
-          <div class="shipping-address">
+          <div class="shipping-address address-wrapper" id="shipping_address">
             <h3>Shipping Address</h3>
             <h5>Contact Details</h5>
             <fieldset>
-              <label for="name">Name</label>
               <input type="text" name="name" id="name" class="input-control" />
+              <label for="name">Name</label>
             </fieldset>
             <fieldset>
-              <label for="phone">Phone Number</label>
               <input type="number" name="phone" id="phone" class="input-control" />
+              <label for="phone">Phone Number</label>
             </fieldset>
             <h5 class="mt-32">Shipping Address</h5>
             <fieldset>
-              <label for="address">House no. / Building Name</label>
               <input type="number" name="address" id="address" class="input-control" />
+              <label for="address">House no. / Building Name</label>
             </fieldset>
             <fieldset>
-              <label for="street">Road Name/ Area/ Colony</label>
               <input type="number" name="street" id="street" class="input-control" />
+              <label for="street">Road Name/ Area/ Colony</label>
             </fieldset>
             <div class="field-group">
               <fieldset>
-                <label for="pincode">Pincode</label>
                 <input type="number" name="pincode" id="pincode" class="input-control" />
+                <label for="pincode">Pincode</label>
               </fieldset>
               <fieldset>
                 <select>
@@ -99,13 +99,75 @@
                 </select>
               </fieldset>
               <fieldset>
-                <label for="gst">GST / IN (Optional)</label>
                 <input type="number" name="gst" id="gst" class="input-control" />
+                <label for="gst">GST / IN (Optional)</label>
               </fieldset>
             </div>
             <fieldset>
               <label for="default_address" class="checkbox-control"><input type="checkbox" name="default_address" id="default_address"> Make as default shipping address<span class="checkmark"></span></label>
             </fieldset>
+          </div>
+          <div class="address-wrapper billing-address" id="billing_address">
+            <h3>Billing Address</h3>
+            <p class="billing-info">
+              Is your shipping and billing address are same?
+              <label class="switch">
+                <input type="checkbox" id="billing_info">
+                <span class="slider round"></span>
+              </label>
+            </p>
+            <div class="billing-block hide">
+              <h5>Contact Details</h5>
+              <fieldset>
+                <input type="text" name="name" id="name" class="input-control" />
+                <label for="name">Name</label>
+              </fieldset>
+              <fieldset>
+                <input type="number" name="phone" id="phone" class="input-control" />
+                <label for="phone">Phone Number</label>
+              </fieldset>
+              <h5 class="mt-32">Shipping Address</h5>
+              <fieldset>
+                <input type="number" name="address" id="address" class="input-control" />
+                <label for="address">House no. / Building Name</label>
+              </fieldset>
+              <fieldset>
+                <input type="number" name="street" id="street" class="input-control" />
+                <label for="street">Road Name/ Area/ Colony</label>
+              </fieldset>
+              <div class="field-group">
+                <fieldset>
+                  <input type="number" name="pincode" id="pincode" class="input-control" />
+                  <label for="pincode">Pincode</label>
+                </fieldset>
+                <fieldset>
+                  <select>
+                    <option>City</option>
+                    <option>Delhi</option>
+                    <option>Jodhpure</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="field-group">
+                <fieldset>
+                  <select>
+                    <option>City</option>
+                    <option>Delhi</option>
+                    <option>Jodhpure</option>
+                  </select>
+                </fieldset>
+                <fieldset>
+                  <input type="number" name="gst" id="gst" class="input-control" />
+                  <label for="gst">GST / IN (Optional)</label>
+                </fieldset>
+              </div>
+              <fieldset>
+                <label for="default_address" class="checkbox-control"><input type="checkbox" name="default_address" id="default_address"> Make as default shipping address<span class="checkmark"></span></label>
+              </fieldset>
+            </div>
+          </div>
+          <div class="btn-block">
+            <button class="btn btn-save">Save and Continue</button>
           </div>
         </div>
         <div class="checkout-product-section">
