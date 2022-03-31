@@ -24,25 +24,25 @@
       </div>
       <div class="checkout-step-wrapper">
         <ul class="checkout-steps">
-          <li class="complete">
+          <li class="login complete">
             <div class="step-list">
               <span class="step"></span>
               <span class="txt">Login</span>
             </div>
           </li>
-          <li class="active">
+          <li class="address active">
             <div class="step-list">
               <span class="step">2</span>
               <span class="txt">Address</span>
             </div>
           </li>
-          <li>
+          <li class="payment">
             <div class="step-list">
               <span class="step">3</span>
               <span class="txt">Payment</span>
             </div>
           </li>
-          <li>
+          <li class="summary">
             <div class="step-list">
               <span class="step">4</span>
               <span class="txt">Summary</span>
@@ -53,7 +53,7 @@
     </div>
   </header>
   <div class="body-wrapper">
-    <section class="section-wrapper address-section" id="address">
+    <section class="section-wrapper address-section hide" id="address">
       <div class="container">
         <div class="left-section">
           <h2>Add Address</h2>
@@ -215,6 +215,254 @@
                 <h4>Order Total</h4>
                 <span>₹370</span>
               </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="section-wrapper payment-section " id="payment">
+      <div class="container">
+        <div class="left-section">
+          <h2>Payment Method</h2>
+          <div class="payment-method-list">
+            <div class="payment-method upi">
+              <div class="payment-header">
+                <div class="icon-block">
+                  <svg class="svg-icon payment-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_390_3885)">
+                    <path d="M7.3208 24.4999L14.2719 0.546875L20.2836 12.5704L7.3208 24.4999Z" fill="#097939"/>
+                    <path d="M3 24.453L9.95108 0.5L15.9628 12.5235L3 24.453Z" fill="#ED752E"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_390_3885">
+                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                  <h5>UPI</h5>
+                </div>
+                <label class="label-container">
+                  <input type="radio" name="payment" value="upi" class="radio-input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <div class="payment-method card">
+              <div class="payment-header">
+                <div class="icon-block">
+                  <svg class="svg-icon payment-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10.5H3V16.5C3 17.2956 3.31607 18.0587 3.87868 18.6213C4.44129 19.1839 5.20435 19.5 6 19.5H18C18.7956 19.5 19.5587 19.1839 20.1213 18.6213C20.6839 18.0587 21 17.2956 21 16.5V10.5Z" fill="#D6E7FF"/>
+                    <path d="M3 10.5H21V8.5C21 7.70435 20.6839 6.94129 20.1213 6.37868C19.5587 5.81607 18.7956 5.5 18 5.5H6C5.20435 5.5 4.44129 5.81607 3.87868 6.37868C3.31607 6.94129 3 7.70435 3 8.5V10.5Z" fill="#D6E7FF"/>
+                    <path d="M3 10.5H21M3 10.5V16.5M3 10.5V8.5M21 10.5V16.5M21 10.5V8.5M7 15.5H8M12 15.5H13M21 16.5C21 17.2956 20.6839 18.0587 20.1213 18.6213C19.5587 19.1839 18.7956 19.5 18 19.5H6C5.20435 19.5 4.44129 19.1839 3.87868 18.6213C3.31607 18.0587 3 17.2956 3 16.5M21 16.5V8.5M21 8.5C21 7.70435 20.6839 6.94129 20.1213 6.37868C19.5587 5.81607 18.7956 5.5 18 5.5H6C5.20435 5.5 4.44129 5.81607 3.87868 6.37868C3.31607 6.94129 3 7.70435 3 8.5M3 8.5V16.5" stroke="#2072DE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+                  <h5>Credit / Debit Card</h5>
+                </div>
+                <label class="label-container">
+                  <input type="radio" name="payment" value="card" class="radio-input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="form-group">
+                <div class="payment-form">
+                  <fieldset>
+                    <label class="lable" for="cardnumber">Card Number</label>
+                    <input type="number" name="cardnumber" id="cardnumber" class="input-control" />
+                  </fieldset>
+                  <fieldset>
+                    <label class="lable" for="nameoncard">Name on Card</label>
+                    <input type="text" name="nameoncard" id="nameoncard" class="input-control" />
+                  </fieldset>
+                </div>
+                <div class="payment-form">
+                  <fieldset>
+                    <label class="lable" for="expirationdate">Expiration Date</label>
+                    <input type="number" name="expirationdate" id="expirationdate" class="input-control" />
+                  </fieldset>
+                  <fieldset>
+                    <label class="lable" for="cvv">CVV</label>
+                    <input type="text" name="cvv" min="1" maxlength="4" id="cvv" class="input-control" />
+                    <svg class="svg-icon icon-cvv" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 10.5H21M3 10.5V16.5M3 10.5V8.5M21 10.5V16.5M21 10.5V8.5M11 15.5H12M14 15.5H15M21 16.5C21 17.2956 20.6839 18.0587 20.1213 18.6213C19.5587 19.1839 18.7956 19.5 18 19.5H6C5.20435 19.5 4.44129 19.1839 3.87868 18.6213C3.31607 18.0587 3 17.2956 3 16.5M21 16.5V8.5M21 8.5C21 7.70435 20.6839 6.94129 20.1213 6.37868C19.5587 5.81607 18.7956 5.5 18 5.5H6C5.20435 5.5 4.44129 5.81607 3.87868 6.37868C3.31607 6.94129 3 7.70435 3 8.5M3 8.5V16.5M17 15.5H18" stroke="#545962" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="payment-method cod">
+              <div class="payment-header">
+                <div class="icon-block">
+                  <svg class="svg-icon payment-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 19.5H19C19.5304 19.5 20.0391 19.2893 20.4142 18.9142C20.7893 18.5391 21 18.0304 21 17.5V11.5C21 10.9696 20.7893 10.4609 20.4142 10.0858C20.0391 9.71071 19.5304 9.5 19 9.5H17H9C8.46957 9.5 7.96086 9.71071 7.58579 10.0858C7.21071 10.4609 7 10.9696 7 11.5V15.5V17.5C7 18.0304 7.21071 18.5391 7.58579 18.9142C7.96086 19.2893 8.46957 19.5 9 19.5ZM15.4142 15.9142C15.7893 15.5391 16 15.0304 16 14.5C16 13.9696 15.7893 13.4609 15.4142 13.0858C15.0391 12.7107 14.5304 12.5 14 12.5C13.4696 12.5 12.9609 12.7107 12.5858 13.0858C12.2107 13.4609 12 13.9696 12 14.5C12 15.0304 12.2107 15.5391 12.5858 15.9142C12.9609 16.2893 13.4696 16.5 14 16.5C14.5304 16.5 15.0391 16.2893 15.4142 15.9142Z" fill="#E1F2E4"/>
+                    <path d="M17 9.5V7.5C17 6.96957 16.7893 6.46086 16.4142 6.08579C16.0391 5.71071 15.5304 5.5 15 5.5H5C4.46957 5.5 3.96086 5.71071 3.58579 6.08579C3.21071 6.46086 3 6.96957 3 7.5V13.5C3 14.0304 3.21071 14.5391 3.58579 14.9142C3.96086 15.2893 4.46957 15.5 5 15.5H7V11.5C7 10.9696 7.21071 10.4609 7.58579 10.0858C7.96086 9.71071 8.46957 9.5 9 9.5H17Z" fill="#E1F2E4"/>
+                    <path d="M17 9.5V7.5C17 6.96957 16.7893 6.46086 16.4142 6.08579C16.0391 5.71071 15.5304 5.5 15 5.5H5C4.46957 5.5 3.96086 5.71071 3.58579 6.08579C3.21071 6.46086 3 6.96957 3 7.5V13.5C3 14.0304 3.21071 14.5391 3.58579 14.9142C3.96086 15.2893 4.46957 15.5 5 15.5H7M17 9.5H19M17 9.5H9M7 15.5V11.5M7 15.5V17.5M19 9.5C19.5304 9.5 20.0391 9.71071 20.4142 10.0858C20.7893 10.4609 21 10.9696 21 11.5V17.5C21 18.0304 20.7893 18.5391 20.4142 18.9142C20.0391 19.2893 19.5304 19.5 19 19.5H9C8.46957 19.5 7.96086 19.2893 7.58579 18.9142C7.21071 18.5391 7 18.0304 7 17.5M19 9.5H9M9 9.5C8.46957 9.5 7.96086 9.71071 7.58579 10.0858C7.21071 10.4609 7 10.9696 7 11.5M7 11.5V17.5M16 14.5C16 15.0304 15.7893 15.5391 15.4142 15.9142C15.0391 16.2893 14.5304 16.5 14 16.5C13.4696 16.5 12.9609 16.2893 12.5858 15.9142C12.2107 15.5391 12 15.0304 12 14.5C12 13.9696 12.2107 13.4609 12.5858 13.0858C12.9609 12.7107 13.4696 12.5 14 12.5C14.5304 12.5 15.0391 12.7107 15.4142 13.0858C15.7893 13.4609 16 13.9696 16 14.5Z" stroke="#468650" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                    
+                  <h5>Cash on Delivery</h5>
+                </div>
+                <label class="label-container">
+                  <input type="radio" name="payment" value="cod" class="radio-input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <button class="btn w-100">Continue</button>
+          </div>
+        </div>
+        <div class="checkout-product-section">
+          <section class="cart-wrapper">
+            <div class="cart-header">
+              <span class="item-count">1 item in your cart</span>
+              <span class="edit-icon">EDIT</span>
+            </div>
+            <ul class="cart-product-list">
+              <li>
+                <div class="product-block">
+                  <div class="prod-img">
+                    <img src="./build/img/hair-tool-thumb.jpeg" class="img-responsive" alt="Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800..." />
+                  </div>
+                  <h4>Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800...</h4>
+                </div>
+                <div class="product-info">
+                  <div class="field-qty">
+                    <span>Qty</span>
+                    <div class="quntity_sect">
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="price-block">
+                    <span class="discounted">₹800</span>
+                    <span class="price">₹370</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr class="saprater">
+            <div class="products-detail">
+              <h4 class="heading-title">Price Details</h4>
+              <ul class="products-list">
+                <li>
+                  <h5 class="list-heading">Subtotal (1 item)</h5>
+                  <span class="price">₹370</span>
+                </li>
+                <li>
+                  <h5 class="list-heading">Discount</h5>
+                  <span class="price discounted">FREE</span>
+                </li>
+              </ul>
+              <div class="total-order">
+                <h4>Order Total</h4>
+                <span>₹370</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="section-wrapper summary-section " id="summary">
+      <div class="container">
+        <div class="left-section">
+          <h2>Select Delivery Option</h2>
+          <div class="delivery-option-list section-block">
+            <div class="delivery-option">
+              <div class="header-block">
+                <h4>Express Delivery</h4>
+                <label class="label-container">
+                  <input type="radio" name="delivery" checked value="express" class="radio-input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <ul class="option-list">
+                <li>Delivery Charges ₹89/- applicable</li>
+                <li>Applicable for Delhi Region only</li>
+                <li>Delivered within 3 to 6 Business hours</li>
+              </ul>
+            </div>
+            <div class="delivery-option">
+              <div class="header-block">
+                <h4>Standard Delivery</h4>
+                <label class="label-container">
+                  <input type="radio" name="delivery" value="standard" class="radio-input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <ul class="option-list">
+                <li>For free shipping add items worth ₹1500/-</li>
+                <li>Delivery Charges ₹79/- applicable</li>
+                <li>24 to 48 Business Hours for Delhi Region</li>
+                <li>2 to 5 Business Days for other regions</li>
+              </ul>
+            </div>
+          </div>
+          <h2>Delivery Address</h2>
+          <div class="delivery-address section-block">
+            <h4>John Doe</h4>
+            <address>21, Brigade Tech , Whitefield,<br>
+              Karnataka - 641026<br>
+              +91 9876543210</address>
+          </div>
+          <h2>Payment Method</h2>
+          <div class="section-block summary-payment">
+            <div class="payment-header">
+              <div class="icon-block">
+                <svg class="svg-icon payment-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 19.5H19C19.5304 19.5 20.0391 19.2893 20.4142 18.9142C20.7893 18.5391 21 18.0304 21 17.5V11.5C21 10.9696 20.7893 10.4609 20.4142 10.0858C20.0391 9.71071 19.5304 9.5 19 9.5H17H9C8.46957 9.5 7.96086 9.71071 7.58579 10.0858C7.21071 10.4609 7 10.9696 7 11.5V15.5V17.5C7 18.0304 7.21071 18.5391 7.58579 18.9142C7.96086 19.2893 8.46957 19.5 9 19.5ZM15.4142 15.9142C15.7893 15.5391 16 15.0304 16 14.5C16 13.9696 15.7893 13.4609 15.4142 13.0858C15.0391 12.7107 14.5304 12.5 14 12.5C13.4696 12.5 12.9609 12.7107 12.5858 13.0858C12.2107 13.4609 12 13.9696 12 14.5C12 15.0304 12.2107 15.5391 12.5858 15.9142C12.9609 16.2893 13.4696 16.5 14 16.5C14.5304 16.5 15.0391 16.2893 15.4142 15.9142Z" fill="#E1F2E4"/>
+                  <path d="M17 9.5V7.5C17 6.96957 16.7893 6.46086 16.4142 6.08579C16.0391 5.71071 15.5304 5.5 15 5.5H5C4.46957 5.5 3.96086 5.71071 3.58579 6.08579C3.21071 6.46086 3 6.96957 3 7.5V13.5C3 14.0304 3.21071 14.5391 3.58579 14.9142C3.96086 15.2893 4.46957 15.5 5 15.5H7V11.5C7 10.9696 7.21071 10.4609 7.58579 10.0858C7.96086 9.71071 8.46957 9.5 9 9.5H17Z" fill="#E1F2E4"/>
+                  <path d="M17 9.5V7.5C17 6.96957 16.7893 6.46086 16.4142 6.08579C16.0391 5.71071 15.5304 5.5 15 5.5H5C4.46957 5.5 3.96086 5.71071 3.58579 6.08579C3.21071 6.46086 3 6.96957 3 7.5V13.5C3 14.0304 3.21071 14.5391 3.58579 14.9142C3.96086 15.2893 4.46957 15.5 5 15.5H7M17 9.5H19M17 9.5H9M7 15.5V11.5M7 15.5V17.5M19 9.5C19.5304 9.5 20.0391 9.71071 20.4142 10.0858C20.7893 10.4609 21 10.9696 21 11.5V17.5C21 18.0304 20.7893 18.5391 20.4142 18.9142C20.0391 19.2893 19.5304 19.5 19 19.5H9C8.46957 19.5 7.96086 19.2893 7.58579 18.9142C7.21071 18.5391 7 18.0304 7 17.5M19 9.5H9M9 9.5C8.46957 9.5 7.96086 9.71071 7.58579 10.0858C7.21071 10.4609 7 10.9696 7 11.5M7 11.5V17.5M16 14.5C16 15.0304 15.7893 15.5391 15.4142 15.9142C15.0391 16.2893 14.5304 16.5 14 16.5C13.4696 16.5 12.9609 16.2893 12.5858 15.9142C12.2107 15.5391 12 15.0304 12 14.5C12 13.9696 12.2107 13.4609 12.5858 13.0858C12.9609 12.7107 13.4696 12.5 14 12.5C14.5304 12.5 15.0391 12.7107 15.4142 13.0858C15.7893 13.4609 16 13.9696 16 14.5Z" stroke="#468650" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+                <h5>Cash on Delivery</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-product-section">
+          <section class="cart-wrapper">
+            <div class="cart-header">
+              <span class="item-count">1 item in your cart</span>
+              <span class="edit-icon">EDIT</span>
+            </div>
+            <ul class="cart-product-list">
+              <li>
+                <div class="product-block">
+                  <div class="prod-img">
+                    <img src="./build/img/hair-tool-thumb.jpeg" class="img-responsive" alt="Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800..." />
+                  </div>
+                  <h4>Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800...</h4>
+                </div>
+                <div class="product-info">
+                  <div class="field-qty">
+                    <span>Qty</span>
+                    <div class="quntity_sect">
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="price-block">
+                    <span class="discounted">₹800</span>
+                    <span class="price">₹370</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr class="saprater">
+            <div class="products-detail">
+              <h4 class="heading-title">Price Details</h4>
+              <ul class="products-list">
+                <li>
+                  <h5 class="list-heading">Subtotal (1 item)</h5>
+                  <span class="price">₹370</span>
+                </li>
+                <li>
+                  <h5 class="list-heading">Discount</h5>
+                  <span class="price discounted">FREE</span>
+                </li>
+              </ul>
+              <div class="total-order">
+                <h4>Order Total</h4>
+                <span>₹370</span>
+              </div>
+            </div>
+            <div class="btn-wrapper mt-24">
+              <button class="btn w-100">Place Order</button>
             </div>
           </section>
         </div>

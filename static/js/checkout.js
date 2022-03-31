@@ -27,7 +27,49 @@ const checkoutEvents = () => {
       console.log(currentElement.value.length);
     });
   });
+
+  const paymentOption = document.querySelectorAll(".payment-method .radio-input");
+  paymentOption.forEach(element => {
+    element.addEventListener("change", function (e) {
+      const currentElement = element;
+      const selectedPayment = currentElement.value;
+      console.log(currentElement.value);
+      if(selectedPayment != null) {
+        let selectedOption = document.querySelector('.payment-method-list').querySelector(`.${selectedPayment}`);
+        let activePayment = document.querySelector('.payment-method-list .payment-method.selected');
+        if(activePayment) {
+          activePayment.classList.remove('selected');
+        }
+        selectedOption.classList.add('selected');
+      }
+    });
+  });
+
+
   
 };
+
+const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+
+if(params.step) {
+  let activeStep = document.getElementById(params.step);
+  let checkoutSteps = document.querySelector('.checkout-steps');
+  let activeCheckoutStep = document.querySelector('.checkout-steps .active');
+  if(activeCheckoutStep) {
+    activeCheckoutStep.classList.remove('active');
+  }
+  checkoutSteps.querySelector(`.${params.step}`).classList.add('active');
+  if(activeStep) {
+    let checkoutSection = document.querySelectorAll('.section-wrapper');
+    checkoutSection.forEach(element => {
+      element.classList.add('hide');
+    });
+    activeStep.classList.remove('hide');
+  } else {
+    console.log('no param')
+  }
+}
 
 checkoutEvents();
