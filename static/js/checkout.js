@@ -33,7 +33,6 @@ const checkoutEvents = () => {
     element.addEventListener("change", function (e) {
       const currentElement = element;
       const selectedPayment = currentElement.value;
-      console.log(currentElement.value);
       if(selectedPayment != null) {
         let selectedOption = document.querySelector('.payment-method-list').querySelector(`.${selectedPayment}`);
         let activePayment = document.querySelector('.payment-method-list .payment-method.selected');
@@ -70,6 +69,12 @@ if(params.step) {
   } else {
     console.log('no param')
   }
+} else {
+  const checkoutSections = document.querySelectorAll('.section-wrapper');
+  checkoutSections.forEach(element => {
+    element.classList.add('hide');
+    document.getElementById('address').classList.remove('hide');
+  });
 }
 
 checkoutEvents();
