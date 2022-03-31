@@ -52,8 +52,8 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 
-if(params.step) {
-  let activeStep = document.getElementById(params.step);
+let activeStep = document.getElementById(params.step);
+if(params.step && activeStep) {
   let checkoutSteps = document.querySelector('.checkout-steps');
   let activeCheckoutStep = document.querySelector('.checkout-steps .active');
   if(activeCheckoutStep) {
