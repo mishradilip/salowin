@@ -388,6 +388,12 @@
                 }
               }
             }
+            address {
+              color: #545962;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+            }
             .btn-block {
               display: flex;
               .btn-edit,
@@ -397,7 +403,14 @@
                 line-height: 16px;
                 color: $primary_color;
                 background-color: transparent;
-                margin-right: 16px;
+              }
+              .btn-edit {
+                &::after {
+                  content: "•";
+                  margin-left: 16px;
+                  margin-right: 16px;
+                  color: #9BA4B1;
+                }
               }
             }
           }

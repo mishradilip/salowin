@@ -10,7 +10,8 @@ const conf = {
     categoryScript: path.resolve(__dirname, '../static/js/category.js'),
     productScript: path.resolve(__dirname, '../static/js/product.js'),
     loginScript: path.resolve(__dirname, '../static/js/login.js'),
-    checkoutScript: path.resolve(__dirname, '../static/js/checkout.js')
+    checkoutScript: path.resolve(__dirname, '../static/js/checkout.js'),
+    commonScript: path.resolve(__dirname, '../static/js/script.js')
   },
   output: {
     filename: '[name].js',
