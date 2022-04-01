@@ -1,0 +1,68 @@
+@import 'globals/reset';
+@import 'globals/default';
+@import 'globals/colors';
+@import 'globals/common';
+@import 'components/cart';
+
+@import 'components/header.scss';
+@import 'components/product-item.scss';
+@import 'components/breadcrumb';
+@import 'components/footer.scss';
+
+
+.wishlist-section {
+  margin-bottom: 100px;
+  .breadcrumb-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .heading {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 40px;
+  }
+  .wishlist-product {
+    display: flex;
+    li {
+      width: 24%;
+      flex-wrap: wrap;
+      background-color: $white;
+      margin-right: 16px;
+      margin-bottom: 20px;
+      position: relative;
+      .product-action-block {
+        display: flex;
+        .wishlist-icon {
+          display: none;
+        }
+        .add-to-cart {
+          border-top: 1px solid #EFF1FA;
+          background-color: transparent;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 125%;
+          color: $primary_color;
+          width: 100%;
+        }
+      }
+      .remove-wishlist {
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        background-color: #9ba4b1;
+        border-radius: 50%;
+        top: 18px;
+        right: 18px;
+        cursor: pointer;
+        &::after {
+          content: '\00d7';
+          color: #fff;
+          font-size: 20px;
+          left: 4px;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
