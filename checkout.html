@@ -54,7 +54,151 @@
   </header>
   <div class="body-wrapper">
     <section class="section-wrapper address-section hide" id="address">
-      <div class="container">
+      <div class="container" id="select_address">
+        <div class="left-section">
+          <h2>Shipping & Billing Address</h2>
+          <div class="select-address-wrapper shipping-address-select" id="shipping_select_address">
+            <div class="head-section">
+              <h4>Select Shipping Address</h4>
+              <button class="btn-address">+ NEW ADDRESS</button>
+            </div>
+            <ul class="address-list">
+              <li class="address-section">
+                <div class="header-block">
+                  <h4>John Doe</h4>
+                  <label class="label-container">
+                    <input type="radio" name="shipping_address" checked="" value="express" class="radio-input">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <address>
+                  21, Brigade Tech , Whitefield,<br>
+                  Karnataka - 641026<br>
+                  +91 9876543210
+                </address>
+                <div class="btn-block">
+                  <button class="btn-edit">EDIT ADDRESS</button>
+                  <button class="btn-remove">REMOVE</button>
+                </div>
+              </li>
+              <li class="address-section">
+                <div class="header-block">
+                  <h4>John Doe</h4>
+                  <label class="label-container">
+                    <input type="radio" name="shipping_address" checked="" value="express" class="radio-input">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <address>
+                  21, Brigade Tech , Whitefield,<br>
+                  Karnataka - 641026<br>
+                  +91 9876543210
+                </address>
+                <div class="btn-block">
+                  <button class="btn-edit">EDIT ADDRESS</button>
+                  <button class="btn-remove">REMOVE</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="select-address-wrapper billing-address-select" id="billing_select_address">
+            <div class="head-section">
+              <h4>Select Billing  Address</h4>
+              <button class="btn-address">+ NEW ADDRESS</button>
+            </div>
+            <ul class="address-list">
+              <li class="address-section">
+                <div class="header-block">
+                  <h4>John Doe</h4>
+                  <label class="label-container">
+                    <input type="radio" name="billin_address" checked="" value="express" class="radio-input">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <address>
+                  21, Brigade Tech , Whitefield,<br>
+                  Karnataka - 641026<br>
+                  +91 9876543210
+                </address>
+                <div class="btn-block">
+                  <button class="btn-edit">EDIT ADDRESS</button>
+                  <button class="btn-remove">REMOVE</button>
+                </div>
+              </li>
+              <li class="address-section">
+                <div class="header-block">
+                  <h4>John Doe</h4>
+                  <label class="label-container">
+                    <input type="radio" name="billin_address" checked="" value="express" class="radio-input">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <address>
+                  21, Brigade Tech , Whitefield,<br>
+                  Karnataka - 641026<br>
+                  +91 9876543210
+                </address>
+                <div class="btn-block">
+                  <button class="btn-edit">EDIT ADDRESS</button>
+                  <button class="btn-remove">REMOVE</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-block">
+            <button class="btn btn-address-continue">Continue</button>
+          </div>
+        </div>
+        <div class="checkout-product-section">
+          <section class="cart-wrapper">
+            <div class="cart-header">
+              <span class="item-count">1 item in your cart</span>
+              <span class="edit-icon">EDIT</span>
+            </div>
+            <ul class="cart-product-list">
+              <li>
+                <div class="product-block">
+                  <div class="prod-img">
+                    <img src="./build/img/hair-tool-thumb.jpeg" class="img-responsive" alt="Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800..." />
+                  </div>
+                  <h4>Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800...</h4>
+                </div>
+                <div class="product-info">
+                  <div class="field-qty">
+                    <span>Qty</span>
+                    <div class="quntity_sect">
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="price-block">
+                    <span class="discounted">₹800</span>
+                    <span class="price">₹370</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr class="saprater">
+            <div class="products-detail">
+              <h4 class="heading-title">Price Details</h4>
+              <ul class="products-list">
+                <li>
+                  <h5 class="list-heading">Subtotal (1 item)</h5>
+                  <span class="price">₹370</span>
+                </li>
+                <li>
+                  <h5 class="list-heading">Discount</h5>
+                  <span class="price discounted">FREE</span>
+                </li>
+              </ul>
+              <div class="total-order">
+                <h4>Order Total</h4>
+                <span>₹370</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="container hide" id="add_address">
         <div class="left-section">
           <h2>Add Address</h2>
           <div class="shipping-address address-wrapper" id="shipping_address">
@@ -167,7 +311,7 @@
             </div>
           </div>
           <div class="btn-block">
-            <button class="btn btn-save">Save and Continue</button>
+            <button class="btn btn-save-address">Save and Continue</button>
           </div>
         </div>
         <div class="checkout-product-section">
@@ -306,7 +450,7 @@
             </div>
           </div>
           <div class="btn-wrapper">
-            <button class="btn w-100">Continue</button>
+            <button class="btn w-100 btn-payment-continue">Continue</button>
           </div>
         </div>
         <div class="checkout-product-section">

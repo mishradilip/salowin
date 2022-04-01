@@ -4,6 +4,7 @@ commonEvents();
 
 const checkoutEvents = () => {
   console.log('Checkout page');
+  // Shipping and billing address are same?
   const billingInfo = document.querySelector('.billing-address #billing_info');
   const billingInfoBlock = document.querySelector('.billing-address .billing-block');
 
@@ -15,19 +16,20 @@ const checkoutEvents = () => {
     }
   });
 
+  // Input value check for address form
   const inputElements = document.querySelectorAll(".address-wrapper .input-control");
   inputElements.forEach(element => {
-    element.addEventListener("input", function (e) {
+    element.addEventListener("input", function () {
       const currentElement = element;
       if(currentElement.value.length) {
         currentElement.parentElement.classList.add('active');
       } else {
         currentElement.parentElement.classList.remove('active');
       }
-      console.log(currentElement.value.length);
     });
   });
 
+  // Maypent method selection
   const paymentOption = document.querySelectorAll(".payment-method .radio-input");
   paymentOption.forEach(element => {
     element.addEventListener("change", function (e) {
@@ -44,7 +46,48 @@ const checkoutEvents = () => {
     });
   });
 
+  // Add new address
+  const addAddress = document.querySelector('.address-section #add_address');
+  const selectAddress = document.querySelector('.address-section #select_address');
+  const addNewAddress = document.querySelectorAll(".select-address-wrapper .btn-address");
+  addNewAddress.forEach(element => {
+    element.addEventListener("click", function (e) {
+      selectAddress.classList.add('hide');
+      addAddress.classList.remove('hide');
+    });
+  });
 
+  // Btn same new address
+  const btnSaveAddress = document.querySelector('.address-section #add_address .btn-save-address');
+  btnSaveAddress.addEventListener('click', function(element) {
+    selectAddress.classList.remove('hide');
+    addAddress.classList.add('hide');
+  });
+
+  // Btn address Continue
+  const btnAddressContinue = document.querySelector('#select_address .btn-address-continue');
+  btnAddressContinue.addEventListener('click', function(element) {
+    location.href = '/checkout.html?step=payment';
+  });
+
+  // Btn payment Continue
+  const btnPaymentContinue = document.querySelector('.payment-section .btn-payment-continue');
+  btnPaymentContinue.addEventListener('click', function(element) {
+    location.href = '/checkout.html?step=summary';
+  });
+
+  // Select shipping address
+  const selectedAddress = document.querySelectorAll("#select_address .address-list .radio-input");
+  selectedAddress.forEach(element => {
+    element.addEventListener("click", function () {
+      const currentElement = element;
+      const parentAddressList = currentElement.parentElement.parentElement.parentElement.parentElement;
+      if(parentAddressList.querySelector('.selected')) {
+        parentAddressList.querySelector('.selected').classList.remove('selected');
+      }
+      currentElement.parentElement.parentElement.parentElement.classList.add('selected');
+    });
+  });
   
 };
 

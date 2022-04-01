@@ -329,6 +329,80 @@
           font-weight: 500;
         }
       }
+      .select-address-wrapper {
+        margin-bottom: 16px;
+        .head-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 16px;
+          h4 {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            color: #000;
+          }
+          .btn-address {
+            background-color: transparent;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            color: $primary_color;
+          }
+        }
+        .address-list {
+          display: flex;
+          flex-direction: column;
+          li {
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08), 0px 2px 3px rgba(0, 0, 0, 0.04);
+            border-radius: 8px;
+            padding: 24px;
+            background-color: $white;
+            margin-bottom: 16px;
+            &.selected {
+              box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12), 0px 0px 3px rgba(0, 0, 0, 0.04);
+            }
+            .header-block {
+              display: flex;
+              justify-content: space-between;
+              .label-container {
+                padding-left: 0;
+                .radio-input {
+                  margin-right: 0;
+                  position: relative;
+                  top: -5px;
+                  right: 3px;
+                }
+                .checkmark {
+                  width: 18px;
+                  height: 18px;
+                }
+                .checkmark::after {
+                  height: 10px;
+                  width: 6px;
+                  margin-left: 30%;
+                  border-bottom: 2px solid #fefefe;
+                  border-right: 2px solid #fff;
+                  top: 2px;
+                }
+              }
+            }
+            .btn-block {
+              display: flex;
+              .btn-edit,
+              .btn-remove {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 16px;
+                color: $primary_color;
+                background-color: transparent;
+                margin-right: 16px;
+              }
+            }
+          }
+        }
+      }
     }
     .checkout-product-section {
       width: 40%;
@@ -428,7 +502,7 @@
           }
           .icon-cvv {
             position: absolute;
-            right: 0;
+            right: 12px;
             bottom: 12px;
           }
         }
