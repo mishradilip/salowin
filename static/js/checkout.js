@@ -67,13 +67,17 @@ const checkoutEvents = () => {
   // Btn address Continue
   const btnAddressContinue = document.querySelector('#select_address .btn-address-continue');
   btnAddressContinue.addEventListener('click', function(element) {
-    location.href = '/checkout.html?step=payment';
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('step', 'payment');
+    window.location.search = urlParams;
   });
 
   // Btn payment Continue
   const btnPaymentContinue = document.querySelector('.payment-section .btn-payment-continue');
   btnPaymentContinue.addEventListener('click', function(element) {
-    location.href = '/checkout.html?step=summary';
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('step', 'summary');
+    window.location.search = urlParams;
   });
 
   // Select shipping address
