@@ -658,3 +658,170 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .header-wrapper {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      .logo-block {
+        width: 100%;
+        box-shadow: inset 0px -1px 0px #EBECF0;
+        padding-left: 16px;
+        padding-right: 16px;
+        .back-arrow {
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-right: 16px;
+          &::before {
+            content: '';
+            border: solid #1A1F26;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 4px;
+            transform: rotate(135deg);
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            content: "";
+            width: 15px;
+            height: 2px;
+            background-color: #1A1F26;
+          }
+        }
+        .header-title {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          color: $primary_text_color;
+          margin-bottom: 0;
+          margin-top: 12px;
+          margin-bottom: 12px;
+        }
+      }
+      .checkout-step-wrapper {
+        padding-top: 12px;
+        padding-bottom: 4px;
+      }
+    }
+    .checkout-steps {
+      li {
+        &:not(:last-child){
+          &::after {
+            margin-left: 8px;
+            margin-right: 8px;
+            width: 16px;
+          }
+        }
+        .txt {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .section-wrapper {
+    padding-bottom: 60px;
+    .container {
+      flex-flow: column;
+      padding-left: 0;
+      padding-right: 0;
+      .left-section {
+        width: 100%;
+        > .btn-block,
+        > .btn-wrapper {
+          padding: 8px 16px;
+          filter: drop-shadow(0px 0px 1.97802px rgba(0, 0, 0, 0.08));
+          background-color: $white;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          margin-bottom: 0;
+        }
+        .select-address-wrapper {
+          .head-section {
+            flex-flow: column;
+            justify-content: flex-start;
+            margin-bottom: 0;
+            h4 {
+              width: 100%;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              padding-left: 16px;
+              padding-right: 16px;
+            }
+            .btn-address {
+              width: 100%;
+              border-top: 1px solid #E5E6EA;
+              border-bottom: 1px solid #E5E6EA;
+              text-align: left;
+              padding-top: 16px;
+              padding-bottom: 16px;
+              padding-left: 16px;
+              padding-right: 16px;
+            }
+          }
+          .address-list {
+            li {
+              border-radius: 0;
+              margin-bottom: 0;
+              &.selected {
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08), 0px 2px 3px rgba(0, 0, 0, 0.04);
+              }
+            }
+          }
+          .btn-block {
+            margin-bottom: 0;
+          }
+        }
+        .address-wrapper {
+          box-shadow: none;
+          border-radius: 0;
+          padding: 16px;
+          .field-group {
+            fieldset:not(:last-child) {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+      .checkout-product-section {
+        width: 100%;
+        .cart-wrapper {
+          margin-left: 0;
+          .cart-header {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+          .cart-product-list {
+            border-radius: 0;
+          }
+          .products-detail {
+            border-radius: 0;
+          }
+        }
+      }
+      .payment-header {
+        h5 {
+          font-weight: 400;
+        }
+      }
+      .payment-method-list {
+        .payment-method {
+          border-radius: 0;
+        }
+        .payment-form {
+          flex-flow: column;
+          fieldset {
+            width: 100%;
+            margin-bottom: 24px;
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

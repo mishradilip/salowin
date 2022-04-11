@@ -1,0 +1,22 @@
+@import 'globals/reset';
+@import 'globals/default';
+@import 'globals/colors';
+@import 'globals/common';
+@import 'components/cart';
+
+@import 'components/header.scss';
+@import 'components/product-item.scss';
+@import 'components/breadcrumb';
+@import 'components/footer.scss';
+
+.my-order-section {
+  .breadcrumb-list {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width:1024px) {
+  .header-wrapper .container.header-nav {
+    display: none;
+  }
+}

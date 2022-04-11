@@ -95,6 +95,12 @@ body {
 }
 
 @media (max-width:767px) {
+  .hide-mob {
+    display: none;
+  }
+  .show-mob {
+    display: block;
+  }
  .section-heading {
   font-size: 20px;
   line-height: 24px;

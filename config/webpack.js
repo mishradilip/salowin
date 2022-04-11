@@ -11,7 +11,8 @@ const conf = {
     productScript: path.resolve(__dirname, '../static/js/product.js'),
     loginScript: path.resolve(__dirname, '../static/js/login.js'),
     checkoutScript: path.resolve(__dirname, '../static/js/checkout.js'),
-    commonScript: path.resolve(__dirname, '../static/js/script.js')
+    commonScript: path.resolve(__dirname, '../static/js/script.js'),
+    orderScript: path.resolve(__dirname, '../static/js/order.js')
   },
   output: {
     filename: '[name].js',
