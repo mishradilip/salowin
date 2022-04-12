@@ -9,7 +9,7 @@ const checkoutEvents = () => {
   const billingInfoBlock = document.querySelector('.billing-address .billing-block');
 
   billingInfo.addEventListener('change', function(element) {
-    if(billingInfo.checked) {
+    if(!billingInfo.checked) {
       billingInfoBlock.classList.remove('hide');
     } else {
       billingInfoBlock.classList.add('hide');
