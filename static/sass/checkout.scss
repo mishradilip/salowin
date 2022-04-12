@@ -824,6 +824,13 @@
           .products-detail {
             border-radius: 0;
           }
+          .cart-header-wrapper {
+            .cart-header {
+              background-color: $white;
+              padding: 16px;
+              margin: 0;
+            }
+          }
         }
       }
       .payment-header {
@@ -856,6 +863,31 @@
             padding-left: 0;
             padding-right: 0;
             margin-bottom: 8px;
+          }
+        }
+      }
+    }
+    &.summary-section {
+      .container {
+        position: relative;
+        padding-bottom: 270px;
+        // .cart-header-wrapper {
+        //   position: absolute;
+        //   top: 0;
+        // }
+        .checkout-product-section {
+          .cart-wrapper:not(.cart-header-block) {
+            position: fixed;
+            bottom: 0;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            top: inherit;
+            background: $white;
+            .btn-wrapper {
+              padding: 8px 16px;
+              margin: 0;
+            }
           }
         }
       }
