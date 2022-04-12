@@ -16,6 +16,7 @@ body {
     transform: perspective(1px) translateZ(0);
     position: relative;
     overflow: hidden;
+
     &::before {
       content: "";
       position: absolute;
@@ -32,7 +33,8 @@ body {
       -webkit-transition-timing-function: ease-out;
       transition-timing-function: ease-out;
     }
-    &:hover{
+
+    &:hover {
       &::before {
         right: 0;
       }
@@ -51,16 +53,20 @@ body {
   padding: 0 16px;
   position: relative;
   margin-bottom: 40px;
-  &::after,&::before {
+
+  &::after,
+  &::before {
     content: "";
     width: 30px;
     height: 40px;
     position: relative;
     top: 5px;
   }
+
   &::before {
     background: url(../../build/img/icon-graphic-left.png) no-repeat;
   }
+
   &::after {
     background: url(../../build/img/icon-graphic.png) no-repeat;
   }
@@ -89,21 +95,33 @@ body {
 .unorder-list {
   list-style-type: disc;
   padding-left: 20px;
+
   li {
     margin-bottom: 24px;
   }
 }
 
+.show-f-mob,
+.show-mob {
+  display: none !important;
+}
+
 @media (max-width:767px) {
   .hide-mob {
-    display: none;
+    display: none !important;
   }
+
   .show-mob {
-    display: block;
+    display: block !important;
   }
- .section-heading {
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 16px;
- } 
+
+  .show-f-mob {
+    display: flex !important;
+  }
+
+  .section-heading {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
 }

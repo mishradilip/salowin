@@ -52,6 +52,7 @@ const checkoutEvents = () => {
   const addNewAddress = document.querySelectorAll(".select-address-wrapper .btn-address");
   addNewAddress.forEach(element => {
     element.addEventListener("click", function (e) {
+      document.getElementById('header_title').innerText = 'Add Address';
       selectAddress.classList.add('hide');
       addAddress.classList.remove('hide');
     });
@@ -60,6 +61,7 @@ const checkoutEvents = () => {
   // Btn same new address
   const btnSaveAddress = document.querySelector('.address-section #add_address .btn-save-address');
   btnSaveAddress.addEventListener('click', function(element) {
+    document.getElementById('header_title').innerText = 'Shipping & Billing Address';
     selectAddress.classList.remove('hide');
     addAddress.classList.add('hide');
   });
@@ -78,6 +80,16 @@ const checkoutEvents = () => {
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('step', 'summary');
     window.location.search = urlParams;
+  });
+
+  // Btn back url
+  const btnBackURL = document.querySelector('.header-wrapper .back-arrow');
+  btnBackURL.addEventListener('click', function(element) {
+    let prevElement = document.querySelector('.section-wrapper.active');
+    let prevURL = prevElement.getAttribute('data-backurl') ? prevElement.getAttribute('data-backurl') : '';
+    if(prevURL) {
+      document.location.href = setQueryParam('step',prevURL);
+    }
   });
 
   // Select shipping address
@@ -99,28 +111,38 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 
+const setQueryParam = (key, value) => {
+  const result = new URL(location.href);
+  result.searchParams.set(key, value);
+  return result.toString();
+};
+
 let activeStep = document.getElementById(params.step);
 if(params.step && activeStep) {
   let checkoutSteps = document.querySelector('.checkout-steps');
   let activeCheckoutStep = document.querySelector('.checkout-steps .active');
+  let stepTitle = activeStep.getAttribute('data-title');
   if(activeCheckoutStep) {
     activeCheckoutStep.classList.remove('active');
   }
   checkoutSteps.querySelector(`.${params.step}`).classList.add('active');
   if(activeStep) {
     let checkoutSection = document.querySelectorAll('.section-wrapper');
+    document.getElementById('header_title').innerText = stepTitle;
     checkoutSection.forEach(element => {
       element.classList.add('hide');
     });
     activeStep.classList.remove('hide');
+    activeStep.classList.add('active');
   } else {
-    console.log('no param')
+    console.log('no param');
   }
 } else {
   const checkoutSections = document.querySelectorAll('.section-wrapper');
   checkoutSections.forEach(element => {
     element.classList.add('hide');
     document.getElementById('address').classList.remove('hide');
+    document.getElementById('address').classList.add('active');
   });
 }
 

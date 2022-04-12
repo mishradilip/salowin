@@ -17,8 +17,11 @@
   <header class="header-wrapper">
     <div class="container top-header-container">
       <div class="logo-block">
-        <span class="back-arrow"></span>
-        <h1 class="header-title">Shipping & Billing Address</h1>
+        <a href="./" class="logo hide-mob">
+          <img class="img-responsive" src="./build/img/logo.png" alt="Salowin" />
+        </a>
+        <span class="back-arrow show-f-mob"></span>
+        <h1 class="header-title show-mob" id="header_title">Shipping & Billing Address</h1>
       </div>
       <div class="checkout-step-wrapper">
         <ul class="checkout-steps">
@@ -51,7 +54,7 @@
     </div>
   </header>
   <div class="body-wrapper">
-    <section class="section-wrapper address-section hide" id="address">
+    <section class="section-wrapper address-section hide" data-title="Shipping & Billing Address" data-backURL="" id="address">
       <div class="container" id="select_address">
         <div class="left-section">
           <h2 class="hide-mob">Shipping & Billing Address</h2>
@@ -362,7 +365,7 @@
         </div>
       </div>
     </section>
-    <section class="section-wrapper payment-section " id="payment">
+    <section class="section-wrapper payment-section " data-title="Payment Method" data-backURL="address" id="payment">
       <div class="container">
         <div class="left-section">
           <h2 class="hide-mob">Payment Method</h2>
@@ -501,10 +504,10 @@
         </div>
       </div>
     </section>
-    <section class="section-wrapper summary-section " id="summary">
+    <section class="section-wrapper summary-section " data-title="Select Delivery Option" data-backURL="payment" id="summary">
       <div class="container">
         <div class="left-section">
-          <h2>Select Delivery Option</h2>
+          <h2 class="hide-mob">Select Delivery Option</h2>
           <div class="delivery-option-list section-block">
             <div class="delivery-option">
               <div class="header-block">
