@@ -809,6 +809,23 @@
             padding-right: 16px;
           }
         }
+        .label-container {
+          .checkmark {
+            width: 18px;
+            height: 18px;
+            top: 1px;
+            &::after {
+              border-bottom: 2px solid #fefefe;
+              border-right: 2px solid #fefefe;
+              top: 1px;
+              width: 6px;
+              height: 12px;
+            }
+          }
+          .radio-input {
+            margin-right: 0;
+          }
+        }
       }
       .checkout-product-section {
         width: 100%;
