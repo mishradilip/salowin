@@ -110,6 +110,14 @@ body {
   display: none !important;
 }
 
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
 @media (max-width:767px) {
   .hide-mob {
     display: none !important;
