@@ -330,6 +330,9 @@
 }
 
 @media (max-width:767px) {
+  .header-wrapper .container.top-header-container .search-block {
+    display: none;
+  }
   .product-page {
     padding-bottom: 64px;
   }
