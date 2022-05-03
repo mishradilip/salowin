@@ -268,20 +268,21 @@
           }
         }
       }
-      .user-action {
-        .user-action-link {
-          margin-left: 12px;
-          margin-right: 12px;
-          span,
-          &.user-signup {
-            display: none;
-          }
-        }
-        .download-app {
-          span {
-            display: none;
-          }
-        }
+      
+    }
+  }
+  .user-action {
+    .user-action-link {
+      margin-left: 12px;
+      margin-right: 12px;
+      span,
+      &.user-signup {
+        display: none;
+      }
+    }
+    .download-app {
+      span {
+        display: none;
       }
     }
   }
@@ -289,6 +290,10 @@
 
 @media (max-width:767px) {
   .mobile-header {
+    box-shadow: inset 0 -1px 0 #ebecf0;
+    background-color: $white;
+    justify-content: space-between;
+    align-items: center;
     h2 {
       font-weight: 600;
       font-size: 18px;
@@ -296,8 +301,7 @@
       color: $primary_text_color;
       display: flex;
       padding: 26px 16px;
-      box-shadow: inset 0 -1px 0 #ebecf0;
-      background-color: $white;
+      margin-bottom: 0;
       .back-arrow {
         display: flex;
         align-items: center;
