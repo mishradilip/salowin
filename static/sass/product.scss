@@ -512,6 +512,14 @@
     }
   }
   .similar-product-section {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      .section-title {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
     .product-list {
       li {
         width: 50%;
