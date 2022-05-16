@@ -35,7 +35,6 @@ const productEvents = () => {
     try {
       var successful = document.execCommand('copy');
       var msg = successful ? 'successful' : 'unsuccessful';
-      console.log('Copying text command was ' + msg);
     } catch (err) {
       console.log('Oops, unable to copy');
     }
@@ -59,15 +58,13 @@ const productEvents = () => {
       const currentElement = element;
       const elementID = currentElement.dataset.target;
       const scrollElement = document.getElementById(elementID);
-      console.log('scrollElement',scrollElement.offsetTop);
-      //smoothScroll(scrollElement);
-      // scrollElement.scrollIntoView({behavior: "smooth"});
+      smoothScroll(scrollElement);
     });
   });
 
 };
 
-window.smoothScroll = function(target) {
+const smoothScroll = function(target) {
   var scrollContainer = target;
   do { //find scroll container
       scrollContainer = scrollContainer.parentNode;
@@ -83,7 +80,7 @@ window.smoothScroll = function(target) {
 
   scroll = function(c, a, b, i) {
       i++; if (i > 30) return;
-      c.scrollTop = a + (b - a) / 30 * i;
+      c.scrollTop = (a + (b - a) / 30 * i)- 102;
       setTimeout(function(){ scroll(c, a, b, i); }, 20);
   }
   // start scrolling
