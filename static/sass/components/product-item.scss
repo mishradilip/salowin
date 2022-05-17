@@ -80,6 +80,12 @@
       justify-content: center;
       margin-right: 8px;
       cursor: pointer;
+      &.active {
+        svg {
+          stroke: #DE2B20;
+          fill: #DE2B20;
+        }
+      }
       svg {
         stroke: $primary_color;
         stroke-width: 1px;
