@@ -8,9 +8,16 @@ export default function commonEvents() {
   
   const bindEvents = () => {
     const cartIcon = document.querySelector(".header-wrapper .user-cart");
+    const viewCart = document.querySelector(".buyagain-section .view-cart-block");
     const cartWrapper = document.querySelector(".body-wrapper .cart-wrapper");
     if(cartIcon) {
       cartIcon.addEventListener("click", function () {
+        cartWrapper.classList.add('open');
+      });
+    }
+
+    if(viewCart) {
+      viewCart.addEventListener("click", function () {
         cartWrapper.classList.add('open');
       });
     }
