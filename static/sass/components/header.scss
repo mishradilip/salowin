@@ -134,9 +134,11 @@
       justify-content: flex-start;
       > li {
         display: flex;
-        &:hover {
-          .menu-block {
-            display: block;
+        @media (min-width:1025px) {
+          &:hover {
+            .menu-block {
+              display: block;
+            }
           }
         }
         &:not(:last-child) {
