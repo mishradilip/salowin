@@ -272,6 +272,12 @@
         justify-content: center;
         margin-right: 8px;
         cursor: pointer;
+        &.active {
+          svg {
+            stroke: #DE2B20;
+            fill: #DE2B20;
+          }
+        }
         svg {
           stroke: #2072de;
           stroke-width: 1px;
@@ -402,10 +408,24 @@
   .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     li {
-      width: 24%;
+      width: 30%;
       background-color: $white;
+      @media (min-width:1101px) {
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      @media (min-width:993px) {
+        width: 23.6%;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+      @media (max-width:1100px) and (min-width:768px) {
+        margin-right: 16px;
+        margin-bottom: 20px;
+      }
     }
   }
 }
