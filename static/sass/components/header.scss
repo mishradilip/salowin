@@ -97,6 +97,23 @@
         &:hover{
           color: $primary_color;
         }
+        &.user-cart {
+          position: relative;
+          .cart-count {
+            background-color: $primary_color;
+            color: $white;
+            position: absolute;
+            min-width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 8px;
+            left: 8px;
+            padding: 4px;
+          }
+        }
       }
       .user-signup {
         &::before {
