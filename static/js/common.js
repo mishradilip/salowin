@@ -7,6 +7,23 @@ export default function commonEvents() {
   }
   
   const bindEvents = () => {
+    // Mobile Hamburger Menu
+    const hamburgerIcon = document.querySelector(".btn-hamburger");
+    const mobileProfileMenu = document.querySelector('.mobile-menu');
+    if(hamburgerIcon) {
+      hamburgerIcon.addEventListener("click", function () {
+        mobileProfileMenu.classList.add('show-f-mob');
+      });
+    }
+
+    // Mobile Hamburger back menu
+    const mobMenuBackArrow = document.querySelector(".mobile-menu .back-arrow");
+    if(mobMenuBackArrow) {
+      mobMenuBackArrow.addEventListener("click", function () {
+        mobileProfileMenu.classList.remove('show-f-mob');
+      });
+    }
+
     const cartIcon = document.querySelector(".header-wrapper .user-cart");
     const viewCart = document.querySelector(".buyagain-section .view-cart-block");
     const cartWrapper = document.querySelector(".body-wrapper .cart-wrapper");
