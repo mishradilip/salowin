@@ -118,6 +118,91 @@ body {
   display: none !important;
 }
 
+.show-f {
+  display: flex !important;
+}
+
+.toast {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16), 0px 12px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background-color: $white;
+  padding: 16px;
+  position: fixed;
+  top: -80px;
+  right: 20px;
+  max-width: 420px;
+  width: 100%;
+  display: none;
+  z-index: 2;
+  overflow: hidden;
+  &.show-f {
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    top: 110px;
+  }
+  .icon-close {
+    position: absolute;
+    right: 30px;
+    top: 16px;
+  }
+  &::before {
+    content: "";
+    width: 8px;
+    height: 100%;
+    background: rgba(59, 195, 147, 0.25);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &.toast-info {
+    &::before {
+      background: rgba(32, 114, 222, 0.25);
+    }
+  }
+  &.toast-alert {
+    &::before {
+      background: rgba(234, 81, 81, 0.25);
+    }
+  }
+  .toast-icon {
+    margin: 0 12px 0 8px;
+  }
+  .content {
+    h4 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      color: #000;
+      margin-bottom: 6px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 140%;
+      color: #545962;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 110px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 110px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 110px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 110px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
 @media (max-width:767px) {
   .hide-mob {
     display: none !important;

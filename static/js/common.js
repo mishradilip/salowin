@@ -29,6 +29,14 @@ export default function commonEvents() {
       });
     }
 
+    const toastMsg = document.querySelectorAll('[data-toast]');
+    toastMsg.forEach(element => {
+      element.addEventListener("click", function () {
+        let targetElement = document.querySelector(`.${element.dataset.toast}`);
+        targetElement.classList.add('show-f');
+        setTimeout(function(){ targetElement.classList.remove('show-f') }, 3000);    
+      });
+    });
   }
   const init = () => {
     bindEvents();
