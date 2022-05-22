@@ -665,6 +665,22 @@
   }
 }
 
+.checkout-footer-wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .info-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    li {
+      display: flex;
+      .svg-icon {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .header-wrapper {
     .container {
