@@ -129,7 +129,7 @@
             font-size: 16px;
             line-height: 125%;
             color: $primary_text_color;
-            margin-bottom: 0;
+            margin-bottom: 4px;
           }
           .desc {
             font-weight: 400;
@@ -153,5 +153,27 @@
 }
 
 @media (max-width:767px) {
-
+  .body-wrapper {
+    .content-navigation {
+      padding-left: 0;
+      padding-right: 0;
+      .wallet-detail {
+        border-radius: 0;
+        margin-bottom: 8px;
+      }
+      .transaction-histroy {
+        h3 {
+          padding-left: 16px;
+          padding-right: 16px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 8px;
+        }
+        .transaction-list {
+          border-radius: 0;
+        }
+      }
+    }
+  }
 }

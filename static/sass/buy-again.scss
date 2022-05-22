@@ -212,6 +212,9 @@
       display: none;
     }
     .buyagain-section {
+      .container {
+        padding: 0;
+      }
       .section-wrapper {
         flex-direction: column;
         .view-cart {
@@ -228,6 +231,10 @@
       }
       .buyagain-product {
         margin-right: 0;
+        .product-card {
+          border-radius: 0;
+          margin-bottom: 0;
+        }
       }
     }
   }
