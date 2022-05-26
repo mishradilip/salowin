@@ -1,0 +1,116 @@
+@import 'globals/reset';
+@import 'globals/default';
+@import 'globals/colors';
+@import 'globals/common';
+@import 'components/cart';
+
+@import 'components/header.scss';
+@import 'components/content-navigation';
+@import 'components/footer.scss';
+
+.contact-us-page {
+  background-color: $white;
+  .body-wrapper {
+    padding-top: 56px;
+  }
+  .container-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left-section {
+      max-width: 550px;
+      width: 100%;
+    }
+    .right-section {
+      .content-wrapper {
+        max-width: 400px;
+        background-color: #FAFBFC;
+        border-radius: 6px;
+        padding: 24px;
+      }
+    }
+  }
+  .title-span {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: $primary_color;
+    margin-bottom: 16px;
+  }
+  .heading-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: $primary_text_color;
+    margin-bottom: 16px;
+  }
+  .content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #737B7D;
+    margin-bottom: 40px;
+  }
+  .form-section {
+    fieldset {
+      margin-bottom: 32px;
+      label {
+        color: #1A1F26;
+        font-size: 14px;
+        line-height: 26px;
+      }
+      .input-field {
+        color: #545962;
+        font-size: 14px;
+        line-height: 17px;
+        border: 1px solid #C0C3CE;
+        height: 48px;
+        border-radius: 4px;
+        width: 100%;
+        padding-left: 16px;
+        &:focus {
+          border-color: $primary_color;
+        }
+      }
+      .textarea-input {
+        color: #545962;
+        width: 100%;
+        font-size: 14px;
+        line-height: 17px;
+        border-radius: 4px;
+        border: 1px solid #C0C3CE;
+        resize: none;
+        padding: 16px;
+      }
+      .error-msg {
+        color: #EA5151;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 8px;
+        display: none;
+        .svg-icon {
+          margin-right: 8px;
+        }
+      }
+      .btn-send {
+        background-color: $primary_color;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: $white;
+        border-radius: 8px;
+        padding: 14px;
+        width: 100%;
+      }
+      &.error {
+        .input-field,
+        .textarea-input {
+          border-color: #EA5151;
+        }
+        .error-msg {
+          display: flex;
+        }
+      }
+    }
+  }
+}
