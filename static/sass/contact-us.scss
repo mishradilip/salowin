@@ -165,6 +165,10 @@
         border: 1px solid #C0C3CE;
         resize: none;
         padding: 16px;
+        height: 120px;
+        &:focus {
+          border-color: $primary_color;
+        }
       }
       .error-msg {
         color: #EA5151;
