@@ -1,0 +1,104 @@
+.membership-block {
+  border: 1px solid #EFF1FA;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  .heading-title {
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+    border-bottom: 1px solid #EFF1FA;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    font-weight: 400;
+    .svg-icon {
+      margin-right: 12px;
+    }
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      color: $primary_text_color;
+      margin-right: 4px;
+    }
+    a {
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 500;
+      color: #2072DE;
+      span {
+        color: #2072DE;
+      }
+    }
+  }
+  .list-item {
+    padding-left: 16px;
+    padding-right: 16px;
+    li {
+      margin-bottom: 24px;
+      h5 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $primary_text_color;
+        display: flex;
+        justify-content: space-between;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #545962;
+      }
+      .label-container {
+        display: block;
+        position: relative;
+        margin-bottom: 0;
+        cursor: pointer;
+        font-size: 22px;
+        user-select: none;
+        .radio-input {
+          margin-right: 8px;
+        }
+        .checkmark {
+          position: absolute;
+          top: 0px;
+          right: 1px;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          border: 1px solid #C5CBD2;
+          background-color: $white;
+          &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            transform: rotate(45deg);
+            height: 12px;
+            width: 6px;
+            margin-left: 36%;
+            border-bottom: 2px solid #fefefe;
+            border-right: 2px solid #fff;
+            top: 2px;
+          }
+        }
+        input:checked ~ .checkmark {
+          background-color: #2196F3;
+          border-color: #2196F3;
+        }
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+      }
+    }
+  }
+  .saving-block {
+    background-color: #F1F9F6;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    color: $primary_text_color;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -36,11 +36,17 @@
     }
   }
   .cart-product-list {
-    padding: 16px;
+    padding: 16px 0;
     li {
       display: flex;
       flex-flow: column;
       margin-bottom: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #eff1fa;
+        padding-bottom: 16px;
+      }
       .product-block {
         display: flex;
         margin-bottom: 16px;
@@ -48,12 +54,15 @@
           border: 1px solid #EFF1FA;
           border-radius: 4px;
           margin-right: 16px;
+          width: 54px;
+          height: 54px;
         }
         h4 {
           font-weight: 400;
           font-size: 14px;
           line-height: 130%;
           color: $primary_text_color;
+          width: calc(100% - 70px);
         }
       }
       .product-info {

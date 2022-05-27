@@ -102,6 +102,18 @@ const checkoutEvents = () => {
     });
   }
 
+  // membership click
+  const memberArrow = document.querySelector('.membership-block .heading-title .arrow');
+  if(memberArrow){
+    memberArrow.addEventListener('click', function(element) {
+      if(memberArrow.parentElement.parentElement.classList.contains('open')){
+        memberArrow.parentElement.parentElement.classList.remove('open');
+      } else {
+        memberArrow.parentElement.parentElement.classList.add('open');
+      }
+    });
+  }
+
   // Select shipping address
   const selectedAddress = document.querySelectorAll("#select_address .address-list .radio-input");
   selectedAddress.forEach(element => {
