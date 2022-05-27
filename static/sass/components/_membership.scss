@@ -20,6 +20,10 @@
       color: $primary_text_color;
       margin-right: 4px;
     }
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
     a {
       font-size: 13px;
       line-height: 16px;
@@ -27,6 +31,17 @@
       color: #2072DE;
       span {
         color: #2072DE;
+      }
+    }
+  }
+  &.selected {
+    .heading-title {
+      a {
+        margin-bottom: 12px;
+      }
+      .svg-close {
+        margin-right: 0;
+        margin-left: 24px;
       }
     }
   }
