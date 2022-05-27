@@ -8,13 +8,15 @@ const checkoutEvents = () => {
   const billingInfo = document.querySelector('.billing-address #billing_info');
   const billingInfoBlock = document.querySelector('.billing-address .billing-block');
 
-  billingInfo.addEventListener('change', function(element) {
-    if(!billingInfo.checked) {
-      billingInfoBlock.classList.remove('hide');
-    } else {
-      billingInfoBlock.classList.add('hide');
-    }
-  });
+  if(billingInfo){
+    billingInfo.addEventListener('change', function(element) {
+      if(!billingInfo.checked) {
+        billingInfoBlock.classList.remove('hide');
+      } else {
+        billingInfoBlock.classList.add('hide');
+      }
+    });
+  }
 
   // Input value check for address form
   const inputElements = document.querySelectorAll(".address-wrapper .input-control");
@@ -60,37 +62,45 @@ const checkoutEvents = () => {
 
   // Btn same new address
   const btnSaveAddress = document.querySelector('.address-section #add_address .btn-save-address');
-  btnSaveAddress.addEventListener('click', function(element) {
-    document.getElementById('header_title').innerText = 'Shipping & Billing Address';
-    selectAddress.classList.remove('hide');
-    addAddress.classList.add('hide');
-  });
+  if(btnSaveAddress){
+    btnSaveAddress.addEventListener('click', function(element) {
+      document.getElementById('header_title').innerText = 'Shipping & Billing Address';
+      selectAddress.classList.remove('hide');
+      addAddress.classList.add('hide');
+    });
+  }
 
   // Btn address Continue
   const btnAddressContinue = document.querySelector('#select_address .btn-address-continue');
-  btnAddressContinue.addEventListener('click', function(element) {
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set('step', 'payment');
-    window.location.search = urlParams;
-  });
+  if(btnAddressContinue){
+    btnAddressContinue.addEventListener('click', function(element) {
+      const urlParams = new URLSearchParams(window.location.search);
+      urlParams.set('step', 'payment');
+      window.location.search = urlParams;
+    });
+  }
 
   // Btn payment Continue
   const btnPaymentContinue = document.querySelector('.payment-section .btn-payment-continue');
-  btnPaymentContinue.addEventListener('click', function(element) {
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set('step', 'summary');
-    window.location.search = urlParams;
-  });
+  if(btnPaymentContinue){
+    btnPaymentContinue.addEventListener('click', function(element) {
+      const urlParams = new URLSearchParams(window.location.search);
+      urlParams.set('step', 'summary');
+      window.location.search = urlParams;
+    });
+  }
 
   // Btn back url
   const btnBackURL = document.querySelector('.header-wrapper .back-arrow');
-  btnBackURL.addEventListener('click', function(element) {
-    let prevElement = document.querySelector('.section-wrapper.active');
-    let prevURL = prevElement.getAttribute('data-backurl') ? prevElement.getAttribute('data-backurl') : '';
-    if(prevURL) {
-      document.location.href = setQueryParam('step',prevURL);
-    }
-  });
+  if(btnBackURL){
+    btnBackURL.addEventListener('click', function(element) {
+      let prevElement = document.querySelector('.section-wrapper.active');
+      let prevURL = prevElement.getAttribute('data-backurl') ? prevElement.getAttribute('data-backurl') : '';
+      if(prevURL) {
+        document.location.href = setQueryParam('step',prevURL);
+      }
+    });
+  }
 
   // Select shipping address
   const selectedAddress = document.querySelectorAll("#select_address .address-list .radio-input");
