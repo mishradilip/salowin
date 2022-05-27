@@ -68,6 +68,9 @@
       .btn-search {
         position: absolute;
         left: 5px;
+        svg {
+          background-color: $white;
+        }
       }
     }
 
