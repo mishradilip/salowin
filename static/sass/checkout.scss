@@ -1064,7 +1064,6 @@
           }
         }
         .block-wrapper {
-          background-color: $white;
           h2 {
             padding-top: 12px;
             padding-left: 16px;
@@ -1077,6 +1076,7 @@
             box-shadow: none;
             padding-left: 16px;
             padding-right: 16px;
+            margin-bottom: 0;
           }
         }
         .label-container {
@@ -1096,11 +1096,28 @@
             margin-right: 0;
           }
         }
+        h2 {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #545962;
+          padding: 8px 16px;
+          margin-bottom: 0;
+        } 
       }
       .checkout-product-section {
         width: 100%;
         .cart-wrapper {
           margin-left: 0;
+          .place-order {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            .btn-place-order {
+              margin-bottom: 0;
+            }
+          }
           .cart-header {
             padding-left: 16px;
             padding-right: 16px;
@@ -1126,8 +1143,33 @@
         }
       }
       .payment-method-list {
+        h2 {
+          color: #545962;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          margin: 0;
+          padding: 0 16px 8px 16px;
+        }
         .payment-method {
           border-radius: 0;
+          padding: 16px;
+          .payment-header {
+            .checkbox-container {
+              .checkmark {
+                width: 20px;
+                height: 20px;
+                &::after {
+                  left: 6px;
+                  top: 1px;
+                  width: 6px;
+                  height: 12px;
+                  border: solid $white;
+                  border-width: 0 2px 2px 0;
+                }
+              }
+            }
+          }
         }
         .payment-form {
           flex-flow: column;
@@ -1141,7 +1183,8 @@
         }
       }
       .delivery-option-list {
-        margin-top: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
         border-radius: 0;
         box-shadow: none;
         .delivery-option {
@@ -1153,6 +1196,7 @@
           }
         }
       }
+
     }
     &.summary-section {
       .container {
