@@ -428,6 +428,29 @@
         background-color: transparent;
         box-shadow: none;
         margin-left: 24px;
+        .place-order {
+          border-bottom: 1px solid #EFF1FA;
+          .btn-place-order {
+            background-color: $primary_color;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 125%;
+            text-align: center;
+            text-transform: capitalize;
+            color: $white;
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+          }
+          p {
+            color: #545962;
+            a {
+              color: #545962;
+              text-decoration: underline;
+            }
+          }
+        }
         .cart-header {
           padding-left: 0;
           display: flex;
@@ -670,7 +693,8 @@
           }
         } 
       }
-      .btn-coupon {
+      .btn-coupon,
+      .btn-edit {
         color: $primary_color;
         font-weight: 500;
         font-size: 13px;
@@ -805,6 +829,21 @@
       line-height: 24px;
       address {
         margin-bottom: 16px;
+      }
+      h5 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #545962;
+        margin-bottom: 16px;
+      }
+      .address-section {
+        &:not(:last-child) {
+          border-bottom: 1px solid #EFF1FA;
+          padding-bottom: 24px;
+          margin-bottom: 24px;
+        }
       }
     }
     .summary-payment {

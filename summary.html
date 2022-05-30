@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no" />
+  <title>Welcome to Salowin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/css/checkout.css">
+  <link rel="icon" href="build/img/favicon.png" sizes="32x32" />
+</head>
+
+<body class="checkout-page">
+  <header class="header-wrapper">
+    <div class="container top-header-container">
+      <div class="logo-block">
+        <a href="./" class="logo hide-mob">
+          <img class="img-responsive" src="./build/img/logo.png" alt="Salowin" />
+        </a>
+        <span class="back-arrow show-f-mob"></span>
+        <h1 class="header-title show-mob" id="header_title">Shipping & Billing Address</h1>
+      </div>
+      <div class="checkout-step-wrapper">
+        <ul class="checkout-steps">
+          <li class="login complete">
+            <div class="step-list">
+              <span class="step"></span>
+              <span class="txt">Login</span>
+            </div>
+          </li>
+          <li class="address complete">
+            <div class="step-list">
+              <span class="step">2</span>
+              <span class="txt">Address</span>
+            </div>
+          </li>
+          <li class="payment complete">
+            <div class="step-list">
+              <span class="step">3</span>
+              <span class="txt">Payment</span>
+            </div>
+          </li>
+          <li class="summary active">
+            <div class="step-list">
+              <span class="step">4</span>
+              <span class="txt">Summary</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="body-wrapper">
+    <section class="section-wrapper summary-section" data-title="Summary" data-backURL="payment" id="summary">
+      <div class="container">
+        <div class="checkout-product-section show-mob">
+          <section class="cart-wrapper cart-header-block">
+            <div class="cart-header-wrapper">
+              <div class="cart-header">
+                <span class="item-count">1 item in your cart</span>
+                <span class="edit-icon">EDIT</span>
+              </div>
+              <ul class="cart-product-list">
+                <li>
+                  <div class="product-block">
+                    <div class="prod-img">
+                      <img src="./build/img/hair-tool-thumb.jpeg" class="img-responsive" alt="Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800..." />
+                    </div>
+                    <h4>Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800...</h4>
+                  </div>
+                  <div class="product-info">
+                    <div class="field-qty">
+                      <span>Qty</span>
+                      <div class="quntity_sect">
+                        <span>1</span>
+                      </div>
+                    </div>
+                    <div class="price-block">
+                      <span class="discounted">₹800</span>
+                      <span class="price">₹370</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="left-section">
+          <h2 class="hide-mob">Select Delivery Option</h2>
+          <div class="delivery-option-list section-block">
+            <div class="delivery-option">
+              <h4 class="show-mob mob-heading">Select Delivery Option</h4>
+              <div class="header-block">
+                <h4>Express Delivery</h4>
+                <label class="label-container">
+                  <input type="radio" name="delivery" checked value="express" class="radio-input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <ul class="option-list">
+                <li>Delivery Charges ₹89/- applicable</li>
+                <li>Applicable for Delhi Region only</li>
+                <li>Delivered within 3 to 6 Business hours</li>
+              </ul>
+            </div>
+            <div class="delivery-option">
+              <div class="header-block">
+                <h4>Standard Delivery</h4>
+                <label class="label-container">
+                  <input type="radio" name="delivery" value="standard" class="radio-input">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <ul class="option-list">
+                <li>For free shipping add items worth ₹1500/-</li>
+                <li>Delivery Charges ₹79/- applicable</li>
+                <li>24 to 48 Business Hours for Delhi Region</li>
+                <li>2 to 5 Business Days for other regions</li>
+              </ul>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <h2>Addresses</h2>
+            <div class="delivery-address section-block">
+              <div class="address-section">
+                <h5>Shipping Address</h5>
+                <h4>John Doe</h4>
+                <address>21, Brigade Tech , Whitefield, Karnataka - 641026<br>
+                  +91 9876543210</address>
+                <span class="edit-address btn-text">EDIT ADDRESS</span>
+              </div>
+              <div class="address-section">
+                <h5>Billing Address</h5>
+                <h4>John Doe</h4>
+                <address>21, Brigade Tech , Whitefield, Karnataka - 641026<br>
+                  +91 9876543210</address>
+                <span class="edit-address btn-text">EDIT ADDRESS</span>
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <h2>Payment Method</h2>
+            <div class="section-block summary-payment">
+              <div class="payment-header">
+                <div class="icon-block">
+                  <svg class="svg-icon payment-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 19.5H19C19.5304 19.5 20.0391 19.2893 20.4142 18.9142C20.7893 18.5391 21 18.0304 21 17.5V11.5C21 10.9696 20.7893 10.4609 20.4142 10.0858C20.0391 9.71071 19.5304 9.5 19 9.5H17H9C8.46957 9.5 7.96086 9.71071 7.58579 10.0858C7.21071 10.4609 7 10.9696 7 11.5V15.5V17.5C7 18.0304 7.21071 18.5391 7.58579 18.9142C7.96086 19.2893 8.46957 19.5 9 19.5ZM15.4142 15.9142C15.7893 15.5391 16 15.0304 16 14.5C16 13.9696 15.7893 13.4609 15.4142 13.0858C15.0391 12.7107 14.5304 12.5 14 12.5C13.4696 12.5 12.9609 12.7107 12.5858 13.0858C12.2107 13.4609 12 13.9696 12 14.5C12 15.0304 12.2107 15.5391 12.5858 15.9142C12.9609 16.2893 13.4696 16.5 14 16.5C14.5304 16.5 15.0391 16.2893 15.4142 15.9142Z" fill="#E1F2E4"/>
+                    <path d="M17 9.5V7.5C17 6.96957 16.7893 6.46086 16.4142 6.08579C16.0391 5.71071 15.5304 5.5 15 5.5H5C4.46957 5.5 3.96086 5.71071 3.58579 6.08579C3.21071 6.46086 3 6.96957 3 7.5V13.5C3 14.0304 3.21071 14.5391 3.58579 14.9142C3.96086 15.2893 4.46957 15.5 5 15.5H7V11.5C7 10.9696 7.21071 10.4609 7.58579 10.0858C7.96086 9.71071 8.46957 9.5 9 9.5H17Z" fill="#E1F2E4"/>
+                    <path d="M17 9.5V7.5C17 6.96957 16.7893 6.46086 16.4142 6.08579C16.0391 5.71071 15.5304 5.5 15 5.5H5C4.46957 5.5 3.96086 5.71071 3.58579 6.08579C3.21071 6.46086 3 6.96957 3 7.5V13.5C3 14.0304 3.21071 14.5391 3.58579 14.9142C3.96086 15.2893 4.46957 15.5 5 15.5H7M17 9.5H19M17 9.5H9M7 15.5V11.5M7 15.5V17.5M19 9.5C19.5304 9.5 20.0391 9.71071 20.4142 10.0858C20.7893 10.4609 21 10.9696 21 11.5V17.5C21 18.0304 20.7893 18.5391 20.4142 18.9142C20.0391 19.2893 19.5304 19.5 19 19.5H9C8.46957 19.5 7.96086 19.2893 7.58579 18.9142C7.21071 18.5391 7 18.0304 7 17.5M19 9.5H9M9 9.5C8.46957 9.5 7.96086 9.71071 7.58579 10.0858C7.21071 10.4609 7 10.9696 7 11.5M7 11.5V17.5M16 14.5C16 15.0304 15.7893 15.5391 15.4142 15.9142C15.0391 16.2893 14.5304 16.5 14 16.5C13.4696 16.5 12.9609 16.2893 12.5858 15.9142C12.2107 15.5391 12 15.0304 12 14.5C12 13.9696 12.2107 13.4609 12.5858 13.0858C12.9609 12.7107 13.4696 12.5 14 12.5C14.5304 12.5 15.0391 12.7107 15.4142 13.0858C15.7893 13.4609 16 13.9696 16 14.5Z" stroke="#468650" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                    
+                  <h5>Cash on Delivery</h5>
+                </div>
+                <button class="btn-edit">EDIT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-product-section">
+          <section class="cart-wrapper">
+            <div class="place-order">
+              <button class="btn-place-order">Place Order</button>
+              <p>By place your order, you agree to our company <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms-off-use.html">Conditons of Use</a></p>
+            </div>
+            <div class="cart-header">
+              <span class="item-count">1 item in your cart</span>
+              <span class="edit-icon">EDIT</span>
+            </div>
+            <ul class="cart-product-list">
+              <li>
+                <div class="product-block">
+                  <div class="prod-img">
+                    <img src="./build/img/hair-tool-thumb.jpeg" class="img-responsive" alt="Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800..." />
+                  </div>
+                  <h4>Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800...</h4>
+                </div>
+                <div class="product-info">
+                  <div class="field-qty">
+                    <span>Qty</span>
+                    <div class="quntity_sect">
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="price-block">
+                    <span class="discounted">₹800</span>
+                    <span class="price">₹370</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="product-block">
+                  <div class="prod-img">
+                    <img src="./build/img/hair-tool-thumb.jpeg" class="img-responsive" alt="Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800..." />
+                  </div>
+                  <h4>Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800...</h4>
+                </div>
+                <div class="product-info">
+                  <div class="field-qty">
+                    <span>Qty</span>
+                    <div class="quntity_sect">
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="price-block">
+                    <span class="discounted">₹800</span>
+                    <span class="price">₹370</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="product-block">
+                  <div class="prod-img">
+                    <img src="./build/img/hair-tool-thumb.jpeg" class="img-responsive" alt="Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800..." />
+                  </div>
+                  <h4>Chaoba - Tools - Hair Tools - Dryer - 2000 Watts Chaoba 2800...</h4>
+                </div>
+                <div class="product-info">
+                  <div class="field-qty">
+                    <span>Qty</span>
+                    <div class="quntity_sect">
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="price-block">
+                    <span class="discounted">₹800</span>
+                    <span class="price">₹370</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr class="saprater">
+            <div class="membership-block selected">
+              <h5 class="heading-title">
+                <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.53979 0.057585C9.0234 0.19664 8.70281 0.430781 7.76738 1.35187C6.96596 2.14106 6.83132 2.23079 6.34302 2.30133C6.19322 2.32299 5.66983 2.34104 5.1799 2.34147C4.15622 2.34237 3.84012 2.38778 3.41307 2.59539C3.05633 2.76884 2.76352 3.06144 2.59129 3.41666C2.3838 3.84457 2.33843 4.16055 2.33753 5.18384C2.3371 5.67378 2.31904 6.19717 2.29739 6.34697C2.22685 6.83522 2.13707 6.9699 1.348 7.77132C0.555026 8.57673 0.368369 8.8052 0.187653 9.19137C-0.157365 9.92858 -0.0265176 10.673 0.579335 11.42C0.705375 11.5753 1.0833 11.975 1.41921 12.3082C2.31122 13.193 2.3362 13.2612 2.33753 14.8209C2.33843 15.8391 2.38341 16.1514 2.59211 16.5877C2.82 17.0643 3.24666 17.4042 3.82519 17.5702C3.98422 17.6158 4.34123 17.6391 5.23039 17.6619C6.4949 17.6943 6.6465 17.7159 6.96134 17.9081C7.04279 17.9578 7.4297 18.3161 7.82115 18.7043C8.78582 19.6609 9.21502 19.9355 9.8333 19.9919C10.2962 20.0342 10.712 19.9119 11.1999 19.59C11.3236 19.5083 11.7679 19.1052 12.187 18.6943C12.6062 18.2834 13.0195 17.9115 13.1055 17.8679C13.4123 17.7121 13.5568 17.6942 14.7665 17.6625C15.6539 17.6393 16.0129 17.6157 16.1717 17.5702C16.7335 17.409 17.1689 17.0716 17.387 16.6286C17.6073 16.1811 17.6247 16.0603 17.6578 14.7509C17.6988 13.1291 17.6482 13.2546 18.6906 12.191C19.1014 11.7718 19.5044 11.3276 19.586 11.2038C20.1832 10.2988 20.1294 9.46268 19.4176 8.58478C19.2915 8.42939 18.9219 8.03849 18.5962 7.71606C18.2704 7.39363 17.9596 7.0549 17.9054 6.96333C17.7085 6.63024 17.6902 6.50256 17.6578 5.23434C17.6351 4.34479 17.6119 3.98824 17.5662 3.82914C17.399 3.2463 17.0641 2.82539 16.5856 2.5968C16.1471 2.38728 15.8359 2.34237 14.8169 2.34147C13.2573 2.34014 13.1891 2.31517 12.3043 1.42316C11.9711 1.08725 11.5714 0.70932 11.416 0.58328C10.7925 0.077556 10.1422 -0.104645 9.53979 0.057585ZM10.4252 1.31396C10.5237 1.37161 10.9471 1.75407 11.3663 2.16388C12.6582 3.42694 12.7429 3.462 14.6297 3.51265C15.9061 3.54692 16.0271 3.56639 16.2307 3.77004C16.4344 3.97374 16.4539 4.09466 16.4881 5.37113C16.5388 7.25786 16.5739 7.34263 17.8369 8.63449C18.6816 9.4984 18.8102 9.67916 18.8102 10.0024C18.8102 10.3256 18.6816 10.5063 17.8369 11.3702C16.5732 12.6628 16.5374 12.7494 16.4878 14.6336C16.4543 15.9105 16.435 16.0304 16.2307 16.2347C16.0265 16.4389 15.9065 16.4582 14.6297 16.4918C12.7454 16.5413 12.6588 16.5771 11.3663 17.8409C10.5024 18.6855 10.3216 18.8141 9.99842 18.8141C9.67521 18.8141 9.49239 18.6847 8.65009 17.8596C7.33438 16.5708 7.26794 16.5431 5.36718 16.4921C4.09072 16.4578 3.9698 16.4383 3.7661 16.2347C3.56244 16.031 3.54298 15.9101 3.5087 14.6336C3.45805 12.7469 3.423 12.6621 2.15994 11.3702C1.31529 10.5063 1.18667 10.3256 1.18667 10.0024C1.18667 9.67951 1.316 9.49704 2.14208 8.65403C3.41768 7.35232 3.45817 7.25512 3.50866 5.37113C3.52735 4.67323 3.55869 4.13902 3.58609 4.05136C3.64498 3.86279 3.85868 3.64905 4.04741 3.58987C4.13574 3.56217 4.66401 3.53137 5.36718 3.51292C7.24399 3.46364 7.35447 3.41807 8.63055 2.16677C9.02821 1.77685 9.41309 1.41651 9.48586 1.36602C9.80493 1.14458 10.1072 1.12785 10.4252 1.31396ZM7.0662 5.98558C6.5475 6.16676 6.1244 6.60292 5.96811 7.11748C5.9021 7.33473 5.88885 7.4614 5.90163 7.75311C5.91582 8.07753 5.93344 8.1496 6.06261 8.41094C6.40661 9.10696 7.17501 9.51396 7.90807 9.38839C8.6776 9.2566 9.25266 8.68155 9.38444 7.91202C9.51017 7.17813 9.10313 6.41059 8.40528 6.06569C8.13209 5.9307 8.08062 5.9189 7.71567 5.90811C7.38578 5.89838 7.27959 5.91105 7.0662 5.98558ZM12.6756 6.52976C12.5539 6.59577 6.6003 12.5489 6.53715 12.6678C6.40192 12.9221 6.50862 13.2861 6.76402 13.4418C6.92089 13.5375 7.20787 13.5445 7.34189 13.4559C7.48118 13.3639 13.2671 7.58935 13.4025 7.40731C13.6893 7.02149 13.4131 6.48344 12.9296 6.4863C12.8329 6.48688 12.7185 6.50642 12.6756 6.52976ZM7.97299 7.16785C8.14874 7.28729 8.26126 7.54996 8.22331 7.75229C8.17629 8.0028 7.89404 8.24367 7.64755 8.24367C7.49888 8.24367 7.23011 8.08757 7.14691 7.95294C7.04346 7.78555 7.04271 7.52233 7.14523 7.3542C7.31934 7.06858 7.70058 6.98276 7.97299 7.16785ZM11.9238 10.6489C11.23 10.8357 10.7342 11.3816 10.6124 12.0927C10.4868 12.8258 10.8938 13.5942 11.5899 13.9382C11.8512 14.0673 11.9233 14.085 12.2477 14.0992C12.8944 14.1275 13.408 13.8898 13.7737 13.3931C14.0196 13.0591 14.1157 12.7196 14.0954 12.2569C14.0822 11.9551 14.0598 11.8556 13.9554 11.6326C13.5909 10.8541 12.7227 10.4337 11.9238 10.6489ZM12.6011 11.8355C13.1606 12.0896 12.9621 12.9329 12.3427 12.9334C11.8598 12.9338 11.5925 12.3609 11.9033 11.9915C12.0949 11.7638 12.3283 11.7116 12.6011 11.8355Z" fill="#2AA77A"/>
+                </svg>
+                <div class="content">
+                  <span>Save extra with membership plan.</span>
+                  <strong>Yearly @ ₹999 per month </strong>
+                </div>
+                <a href="javascript:void(0)">
+                  <span class="hide-mob txt">Learn more</span> 
+                  <svg class="svg-icon show-mob" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.48533 6C5.85133 5.22333 6.83867 4.66667 8 4.66667C9.47333 4.66667 10.6667 5.562 10.6667 6.66667C10.6667 7.6 9.81467 8.38333 8.66267 8.60467C8.30133 8.674 8 8.96467 8 9.33333M8 11.3333H8.00667M14 8C14 8.78793 13.8448 9.56815 13.5433 10.2961C13.2417 11.0241 12.7998 11.6855 12.2426 12.2426C11.6855 12.7998 11.0241 13.2417 10.2961 13.5433C9.56815 13.8448 8.78793 14 8 14C7.21207 14 6.43185 13.8448 5.7039 13.5433C4.97595 13.2417 4.31451 12.7998 3.75736 12.2426C3.20021 11.6855 2.75825 11.0241 2.45672 10.2961C2.15519 9.56815 2 8.78793 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2C9.5913 2 11.1174 2.63214 12.2426 3.75736C13.3679 4.88258 14 6.4087 14 8Z" stroke="#545962" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <svg class="svg-icon svg-close" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7756 5.10869C17.0197 4.86461 17.0197 4.46888 16.7756 4.22481C16.5315 3.98073 16.1358 3.98073 15.8917 4.22481L10.5003 9.61621L5.10893 4.22481C4.86486 3.98073 4.46913 3.98073 4.22505 4.22481C3.98097 4.46889 3.98097 4.86461 4.22505 5.10869L9.61645 10.5001L4.22507 15.8915C3.981 16.1356 3.981 16.5313 4.22507 16.7754C4.46915 17.0194 4.86488 17.0194 5.10896 16.7754L10.5003 11.384L15.8917 16.7754C16.1358 17.0194 16.5315 17.0194 16.7756 16.7754C17.0197 16.5313 17.0197 16.1356 16.7756 15.8915L11.3842 10.5001L16.7756 5.10869Z" fill="#545962"/>
+                </svg>                  
+              </h5>
+            </div>
+            <hr class="saprater">
+            <div class="products-detail">
+              <h4 class="heading-title">Price Details</h4>
+              <ul class="products-list">
+                <li>
+                  <h5 class="list-heading">Subtotal (1 item)</h5>
+                  <span class="price">₹370</span>
+                </li>
+                <li>
+                  <h5 class="list-heading">Yearly Membership Plan</h5>
+                  <span class="price">₹999</span>
+                </li>
+                <li>
+                  <h5 class="list-heading">Discount</h5>
+                  <span class="price discounted">FREE</span>
+                </li>
+              </ul>
+              <div class="total-order">
+                <h4>Order Total</h4>
+                <span>₹370</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="checkout-footer-wrapper hide-mob">
+    <div class="container footer-container">
+      <ul class="info-list">
+        <li>
+          <svg class="svg-icon" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.333313" width="48" height="48" rx="24" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30.2537 30.5025H29.149V19.1549H31.3142C33.0661 19.1549 34.7615 19.7749 36.1002 20.905C37.7699 22.3147 38.7333 24.3888 38.7333 26.574V30.5025H37.898" fill="#BFDBFF"/>
+            <path d="M29.1333 28.5025H29.149V19.1549H31.8332C33.25 19.1549 34.6211 19.6563 35.7037 20.5702L36.6038 21.3302C37.9542 22.4702 38.7333 24.1476 38.7333 25.9149V30.5025H37.898" stroke="#1A1F26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2946 21.4208H33.7337L36.068 23.4103V24.8251H31.2946V21.4208Z" stroke="#1A1F26" stroke-width="0.825" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9784 33.3394C35.2397 33.3394 36.2621 32.3233 36.2621 31.07C36.2621 29.8165 35.2397 28.8004 33.9784 28.8004C32.717 28.8004 31.6946 29.8165 31.6946 31.07C31.6946 32.3233 32.717 33.3394 33.9784 33.3394Z" fill="#BFDBFF" stroke="#1A1F26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27.7596 16.9792H15.0154C14.4631 16.9792 14.0154 17.427 14.0154 17.9792V29.0757C14.0154 29.628 14.4631 30.0757 15.0154 30.0757H16.6434H24.2252H27.7596C28.3119 30.0757 28.7596 29.628 28.7596 29.0757V17.9792C28.7596 17.427 28.3119 16.9792 27.7596 16.9792Z" fill="#BFDBFF"/>
+            <path d="M16.3971 30.0757H15.0154C14.4631 30.0757 14.0154 29.628 14.0154 29.0757V26.2228M24.195 30.0757H28.1333C28.6856 30.0757 29.1333 29.628 29.1333 29.0757V17.9792C29.1333 17.427 28.6856 16.9792 28.1333 16.9792H15.0154C14.4631 16.9792 14.0154 17.427 14.0154 17.9792V19.8802" stroke="#1A1F26" stroke-width="1.2" stroke-linecap="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1735 33.3394C21.4349 33.3394 22.4573 32.3233 22.4573 31.07C22.4573 29.8165 21.4349 28.8004 20.1735 28.8004C18.9123 28.8004 17.8897 29.8165 17.8897 31.07C17.8897 32.3233 18.9123 33.3394 20.1735 33.3394Z" fill="#BFDBFF" stroke="#1A1F26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.8788 21.7081H17.9508" stroke="#1A1F26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.93329 24.1668H13.2251" stroke="#1A1F26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>              
+          <div class="item-content">
+            <h5>Free Shipping</h5>
+            <span>For orders above INR499</span>
+          </div>
+        </li>
+        <li>
+          <svg class="svg-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_112_1071)">
+            <path d="M48 24C48 10.7452 37.2549 0 24 0C10.7452 0 3.05176e-05 10.7452 3.05176e-05 24C3.05176e-05 37.2548 10.7452 48 24 48C37.2549 48 48 37.2548 48 24Z" fill="white"/>
+            <path d="M16.9 20.0889C16.3477 20.0889 15.9 20.5366 15.9 21.0889V29.6C15.9 31.8092 17.6909 33.6 19.9 33.6H27.7118C29.9209 33.6 31.7118 31.8092 31.7118 29.6V21.0889C31.7118 20.5366 31.2641 20.0889 30.7118 20.0889H27.6225H20.1256H16.9Z" fill="#BFDBFF"/>
+            <path d="M15.3 21.0889V29.6H16.5V21.0889H15.3ZM19.9 34.2H27.7118V33H19.9V34.2ZM32.3118 29.6V21.0889H31.1118V29.6H32.3118ZM20.1256 19.4889H16.9V20.6889H20.1256V19.4889ZM20.7256 20.0889V18.1485H19.5256V20.0889H20.7256ZM30.7118 19.4889H27.6225V20.6889H30.7118V19.4889ZM27.6225 19.4889H20.1256V20.6889H27.6225V19.4889ZM27.0225 18.1485V20.0889H28.2225V18.1485H27.0225ZM19.5256 20.0889V22.1715H20.7256V20.0889H19.5256ZM27.0225 20.0889V22.1715H28.2225V20.0889H27.0225ZM23.8741 15C25.6129 15 27.0225 16.4096 27.0225 18.1485H28.2225C28.2225 15.7469 26.2757 13.8 23.8741 13.8V15ZM32.3118 21.0889C32.3118 20.2053 31.5954 19.4889 30.7118 19.4889V20.6889C30.9327 20.6889 31.1118 20.868 31.1118 21.0889H32.3118ZM27.7118 34.2C30.2523 34.2 32.3118 32.1405 32.3118 29.6H31.1118C31.1118 31.4778 29.5896 33 27.7118 33V34.2ZM15.3 29.6C15.3 32.1405 17.3595 34.2 19.9 34.2V33C18.0223 33 16.5 31.4778 16.5 29.6H15.3ZM20.7256 18.1485C20.7256 16.4096 22.1352 15 23.8741 15V13.8C21.4725 13.8 19.5256 15.7469 19.5256 18.1485H20.7256ZM16.5 21.0889C16.5 20.868 16.6791 20.6889 16.9 20.6889V19.4889C16.0164 19.4889 15.3 20.2053 15.3 21.0889H16.5Z" fill="black"/>
+            <path d="M6.68264 24L7.12665 23.5964C7.00873 23.4667 6.83997 23.395 6.66474 23.4003C6.4895 23.4055 6.32532 23.4871 6.21535 23.6237L6.68264 24ZM24.4913 5.4C24.16 5.4 23.8913 5.66863 23.8913 6C23.8913 6.33137 24.16 6.6 24.4913 6.6V5.4ZM2.83274 27.8237C2.62489 28.0817 2.66561 28.4594 2.92368 28.6673C3.18176 28.8751 3.55947 28.8344 3.76733 28.5763L2.83274 27.8237ZM10.056 28.6036C10.2789 28.8488 10.6584 28.8669 10.9036 28.644C11.1488 28.4211 11.1669 28.0417 10.944 27.7964L10.056 28.6036ZM41.7 24C41.7 33.6158 33.9894 41.4 24.4913 41.4V42.6C34.6642 42.6 42.9 34.2664 42.9 24H41.7ZM24.4913 41.4C14.9933 41.4 7.28264 33.6158 7.28264 24H6.08264C6.08264 34.2664 14.3185 42.6 24.4913 42.6V41.4ZM24.4913 6.6C33.9894 6.6 41.7 14.3842 41.7 24H42.9C42.9 13.7336 34.6642 5.4 24.4913 5.4V6.6ZM6.21535 23.6237L2.83274 27.8237L3.76733 28.5763L7.14993 24.3764L6.21535 23.6237ZM6.23864 24.4036L10.056 28.6036L10.944 27.7964L7.12665 23.5964L6.23864 24.4036Z" fill="black"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_112_1071">
+            <rect width="48" height="48" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>              
+          <div class="item-content">
+            <h5>Easy Returns</h5>
+            <span>15 Day Easy Returns For Most Products </span>
+          </div>
+        </li>
+        <li>
+          <svg class="svg-icon" width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_601_239)">
+            <path d="M48 24.5C48 11.2452 37.2548 0.5 24 0.5C10.7452 0.5 0 11.2452 0 24.5C0 37.7548 10.7452 48.5 24 48.5C37.2548 48.5 48 37.7548 48 24.5Z" fill="#FAFBFC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4 32.9001H32.4C33.0365 32.9001 33.647 32.6472 34.0971 32.1972C34.5471 31.7471 34.8 31.1366 34.8 30.5001V23.3001C34.8 22.6636 34.5471 22.0531 34.0971 21.603C33.647 21.153 33.0365 20.9001 32.4 20.9001H30H20.4C19.7635 20.9001 19.153 21.153 18.7029 21.603C18.2529 22.0531 18 22.6636 18 23.3001V28.1001V30.5001C18 31.1366 18.2529 31.7471 18.7029 32.1972C19.153 32.6472 19.7635 32.9001 20.4 32.9001ZM28.0971 28.5972C28.5471 28.1471 28.8 27.5366 28.8 26.9001C28.8 26.2636 28.5471 25.6531 28.0971 25.203C27.647 24.753 27.0365 24.5001 26.4 24.5001C25.7635 24.5001 25.153 24.753 24.7029 25.203C24.2529 25.6531 24 26.2636 24 26.9001C24 27.5366 24.2529 28.1471 24.7029 28.5972C25.153 29.0472 25.7635 29.3001 26.4 29.3001C27.0365 29.3001 27.647 29.0472 28.0971 28.5972Z" fill="#BFDBFF"/>
+            <path d="M30 20.9001V18.5001C30 17.8636 29.7471 17.2531 29.2971 16.803C28.847 16.353 28.2365 16.1001 27.6 16.1001H15.6C14.9635 16.1001 14.353 16.353 13.9029 16.803C13.4529 17.2531 13.2 17.8636 13.2 18.5001V25.7001C13.2 26.3366 13.4529 26.9471 13.9029 27.3972C14.353 27.8472 14.9635 28.1001 15.6 28.1001H18M30 20.9001H32.4M30 20.9001H20.4M18 28.1001V23.3001M18 28.1001V30.5001M32.4 20.9001C33.0365 20.9001 33.647 21.153 34.0971 21.603C34.5471 22.0531 34.8 22.6636 34.8 23.3001V30.5001C34.8 31.1366 34.5471 31.7471 34.0971 32.1972C33.647 32.6472 33.0365 32.9001 32.4 32.9001H20.4C19.7635 32.9001 19.153 32.6472 18.7029 32.1972C18.2529 31.7471 18 31.1366 18 30.5001M32.4 20.9001H20.4M20.4 20.9001C19.7635 20.9001 19.153 21.153 18.7029 21.603C18.2529 22.0531 18 22.6636 18 23.3001M18 23.3001V30.5001M28.8 26.9001C28.8 27.5366 28.5471 28.1471 28.0971 28.5972C27.647 29.0472 27.0365 29.3001 26.4 29.3001C25.7635 29.3001 25.153 29.0472 24.7029 28.5972C24.2529 28.1471 24 27.5366 24 26.9001C24 26.2636 24.2529 25.6531 24.7029 25.203C25.153 24.753 25.7635 24.5001 26.4 24.5001C27.0365 24.5001 27.647 24.753 28.0971 25.203C28.5471 25.6531 28.8 26.2636 28.8 26.9001Z" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_601_239">
+            <rect width="48" height="48" fill="white" transform="translate(0 0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>              
+          <div class="item-content">
+            <h5>Cash on Delivery</h5>
+            <span>Pay at the time of delivery</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./build/js/checkoutScript.js"></script>
+</body>
