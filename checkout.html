@@ -54,7 +54,7 @@
     </div>
   </header>
   <div class="body-wrapper">
-    <section class="section-wrapper address-section hide" data-title="Shipping & Billing Address" data-backURL="" id="address">
+    <section class="section-wrapper address-section" data-title="Shipping & Billing Address" data-backURL="" id="address">
       <div class="container" id="select_address">
         <div class="left-section">
           <h2 class="hide-mob">Shipping & Billing Address</h2>
@@ -82,7 +82,7 @@
                   <button class="btn-remove">REMOVE</button>
                 </div>
               </li>
-              <li class="address-section">
+              <li class="address-section selected">
                 <div class="header-block">
                   <h4>John Doe</h4>
                   <label class="label-container">
@@ -126,7 +126,7 @@
                   <button class="btn-remove">REMOVE</button>
                 </div>
               </li>
-              <li class="address-section">
+              <li class="address-section selected">
                 <div class="header-block">
                   <h4>John Doe</h4>
                   <label class="label-container">
@@ -246,6 +246,10 @@
                 <li>
                   <h5 class="list-heading">Subtotal (1 item)</h5>
                   <span class="price">₹370</span>
+                </li>
+                <li>
+                  <h5 class="list-heading">Yearly Membership Plan</h5>
+                  <span class="price">₹999</span>
                 </li>
                 <li>
                   <h5 class="list-heading">Discount</h5>
@@ -426,7 +430,7 @@
         </div>
       </div>
     </section>
-    <section class="section-wrapper payment-section " data-title="Payment" data-backURL="address" id="payment">
+    <section class="section-wrapper payment-section hide" data-title="Payment" data-backURL="address" id="payment">
       <div class="container">
         <div class="left-section">
           <h2 class="hide-mob">Payment Method</h2>
@@ -566,7 +570,7 @@
         </div>
       </div>
     </section>
-    <section class="section-wrapper summary-section " data-title="Summary" data-backURL="payment" id="summary">
+    <section class="section-wrapper summary-section hide" data-title="Summary" data-backURL="payment" id="summary">
       <div class="container">
         <div class="checkout-product-section show-mob">
           <section class="cart-wrapper cart-header-block">

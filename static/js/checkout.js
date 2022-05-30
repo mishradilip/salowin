@@ -159,13 +159,14 @@ if(params.step && activeStep) {
   } else {
     console.log('no param');
   }
-} else {
-  const checkoutSections = document.querySelectorAll('.section-wrapper');
-  checkoutSections.forEach(element => {
-    element.classList.add('hide');
-    document.getElementById('address').classList.remove('hide');
-    document.getElementById('address').classList.add('active');
-  });
 }
+// } else {
+//   const checkoutSections = document.querySelectorAll('.section-wrapper');
+//   checkoutSections.forEach(element => {
+//     element.classList.add('hide');
+//     document.getElementById('address').classList.remove('hide');
+//     document.getElementById('address').classList.add('active');
+//   });
+// }
 
 checkoutEvents();
