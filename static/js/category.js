@@ -43,13 +43,16 @@ const categoryEvents = () => {
 
   const categoryFilterWrapper = document.querySelector('.left-container');
   categoryFilter.addEventListener("click", function() {
-    categoryFilterWrapper.classList.add('show-filter')
+    categoryFilterWrapper.classList.add('show-filter');
+    document.querySelector('body').classList.add('scroll-disabled');
   });
 
   
   const filterBackArrow = document.querySelector('.left-container .filter-heading .back-arrow');
   filterBackArrow.addEventListener("click", function() {
-    categoryFilterWrapper.classList.remove('show-filter')
+    categoryFilterWrapper.classList.remove('show-filter');
+    document.querySelector('body').classList.remove('scroll-disabled');
+
   });
 
 };
