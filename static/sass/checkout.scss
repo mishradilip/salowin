@@ -1016,6 +1016,23 @@
           width: 100%;
           margin-bottom: 0;
         }
+        .btn-block {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .order-detail {
+            display: flex;
+            flex-direction: column;
+            span {
+              color: #545962;
+              font-size: 14px;
+              margin-bottom: 4px;
+            }
+          }
+          .btn-save-address {
+            width: auto;
+          }
+        }
         .mob-heading {
           font-weight: 400 !important;
           font-size: 14px !important;
