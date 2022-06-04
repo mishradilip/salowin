@@ -201,4 +201,29 @@
       }
     }
   }
+  .empty-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    .empty-cart-icon {
+      margin-bottom: 12px;
+    }
+    span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 32px;
+    }
+    .btn-continue-shopping {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: $white;
+      background-color: $primary_color;
+      padding: 10px 24px;
+      border-radius: 8px;
+    }
+  }
 }
