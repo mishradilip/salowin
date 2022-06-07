@@ -46,12 +46,25 @@ export default function commonEvents() {
       });
     }
 
+    // Toast msg
     const toastMsg = document.querySelectorAll('[data-toast]');
     toastMsg.forEach(element => {
       element.addEventListener("click", function () {
         let targetElement = document.querySelector(`.${element.dataset.toast}`);
         targetElement.classList.add('show-f');
         setTimeout(function(){ targetElement.classList.remove('show-f') }, 3000);    
+      });
+    });
+
+    // Add to cart show quantity
+    const btnAddToCart = document.querySelectorAll('.buyagain-section .add-to-cart');
+    btnAddToCart.forEach(element => {
+      element.addEventListener("click", function () {
+        if(element.parentElement.classList.contains('show-qty')){
+          element.parentElement.classList.remove('show-qty');
+        } else {
+          element.parentElement.classList.add('show-qty');
+        }
       });
     });
   }
