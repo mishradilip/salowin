@@ -16,6 +16,7 @@
     }
     &.header-nav {
       padding-bottom: 0;
+      position: relative;
     }
     .logo-block {
       display: flex;
@@ -229,13 +230,13 @@
           }
         }
         .menu-block {
-          background: rgba(26, 31, 38, 0.75);
-          position: fixed;
-          top: 100px;
+          position: absolute;
+          top: 36px;
           bottom: 0;
           left: 0;
           right: 0;
           display: none;
+          z-index: 1;
         }
         .menu-container {
           background-color: $white;
@@ -278,6 +279,18 @@
           }
         }
       }
+    }
+  }
+  .menu-overlayer {
+    display: none;
+    background: rgba(26,31,38,.75);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    &.show {
+      display: block;
     }
   }
 }

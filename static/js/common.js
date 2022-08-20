@@ -16,6 +16,21 @@ export default function commonEvents() {
       });
     }
 
+    // Menu OverLayer
+    const headerMenu = document.querySelectorAll('.header-wrapper .menu-navigation .menu-item');
+    const menuOverLayer = document.querySelector('.header-wrapper .menu-overlayer');
+    headerMenu.forEach(element => {
+      if(element.querySelector('.menu-block') !== null) {
+        element.addEventListener('mouseenter', (e) => {
+          menuOverLayer.classList.add('show');
+        });
+
+        element.addEventListener('mouseleave', (e) => {
+          menuOverLayer.classList.remove('show');
+        });
+      }
+    });
+
     // Mobile Hamburger back menu
     const mobMenuBackArrow = document.querySelector(".mobile-menu .back-arrow");
     if(mobMenuBackArrow) {
