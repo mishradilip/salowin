@@ -2,6 +2,8 @@ export default function commonEvents() {
   const isMobileRegex = /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i;
   const isMobile = () => navigator.userAgent.match(isMobileRegex);
   const bodyElem = document.querySelector('body');
+  const scrollToTopBtn = document.querySelector('.scroll-top-section');
+
   if (isMobile()) {
     bodyElem.classList.add('is-mobile')
   }
@@ -82,9 +84,28 @@ export default function commonEvents() {
         }
       });
     });
+
+    //Scroll to top
+    if (scrollToTopBtn) {
+      scrollToTopBtn.addEventListener('click', function () {
+        event.preventDefault();
+        window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+        scrollToTopBtn.classList.remove('animate-scroll');
+      });
+    }
   }
+
+  const windowScrollEvents = () => {
+    window.addEventListener('scroll', () => {
+      if (scrollToTopBtn) {
+        scrollToTopBtn.classList.add('animate-scroll');
+      }
+    });
+  };
+
   const init = () => {
     bindEvents();
+    windowScrollEvents();
   };
 
   init();
