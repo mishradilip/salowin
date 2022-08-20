@@ -282,6 +282,18 @@
   }
 }
 
+#ui-id-1.ui-menu {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+  height: auto;
+  max-width: 700px;
+}
+
+#ui-id-1.ui-menu .ui-menu-item {
+  background: #fff;
+}
+
 @media (min-width:768px) and (max-width:1024px) {
   .header-wrapper {
     .container {

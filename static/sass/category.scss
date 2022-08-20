@@ -645,3 +645,24 @@
     }
   }
 }
+
+#ui-id-2.ui-menu {
+  display: flex;
+  background: #fff;
+  height: 300px;
+  overflow-y: auto;
+}
+
+#ui-id-2.ui-menu li.ui-menu-item {
+  background: #fff;
+}
+
+#ui-id-2.ui-menu li input.input-text {
+  margin-right: 8px;
+}
+
+#ui-id-2.ui-menu .ui-menu-item-wrapper {
+  padding-left: 15px;
+  width: 100%;
+  margin: 0;
+}
